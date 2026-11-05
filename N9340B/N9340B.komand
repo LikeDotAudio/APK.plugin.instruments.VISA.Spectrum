@@ -2914,7 +2914,7 @@
       "description": "System Error Check",
       "returns": {
         "count": 1,
-        "type": "NR2"
+        "type": "ERROR"
       },
       "group": "System Status and Identification",
       "subsystem": "System"

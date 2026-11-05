@@ -157,7 +157,7 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Get_System_Configure_Port` | `:SYSTem:CONFigure:PORT?` | — | → `…/Reading/Get_System_Configure_Port` | SYST | unverified |
 | `Get_System_Date` | `:SYSTem:DATE?` | — | → `…/Reading/Get_System_Date` | SYST | unverified |
 | `Get_System_Error_Next` | `:SYSTem:ERRor:NEXT?` | — | ERROR → `…/Reading/Get_System_Error_Next` | SYST | unverified |
-| `error_information` | `:SYSTem:ERRor?` | — | NR2 → `…/Reading/error_information` | System Status and Identification |  |
+| `error_information` | `:SYSTem:ERRor?` | — | ERROR → `…/Reading/error_information` | System Status and Identification |  |
 | `Get_System_Time` | `:SYSTem:TIME?` | — | NR3 → `…/Reading/Get_System_Time` | SYST | unverified |
 | `Get_Tgenerator_Amplitude_State` | `:TGENerator:AMPLitude:STATe?` | — | BOOL → `…/Reading/Get_Tgenerator_Amplitude_State` | TGEN | unverified |
 | `Get_Tgenerator_Amplitude_Step` | `:TGENerator:AMPLitude:STEP?` | — | NR1 → `…/Reading/Get_Tgenerator_Amplitude_Step` | TGEN | unverified |
@@ -342,7 +342,7 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Get_System_Configure_Port` | `:SYSTem:CONFigure:PORT?` | — | → `…/Reading/Get_System_Configure_Port` | SYST | unverified |
 | `Get_System_Date` | `:SYSTem:DATE?` | — | → `…/Reading/Get_System_Date` | SYST | unverified |
 | `Get_System_Error_Next` | `:SYSTem:ERRor:NEXT?` | — | ERROR → `…/Reading/Get_System_Error_Next` | SYST | unverified |
-| `error_information` | `:SYSTem:ERRor?` | — | NR2 → `…/Reading/error_information` | System Status and Identification |  |
+| `error_information` | `:SYSTem:ERRor?` | — | ERROR → `…/Reading/error_information` | System Status and Identification |  |
 | `Get_System_Time` | `:SYSTem:TIME?` | — | NR3 → `…/Reading/Get_System_Time` | SYST | unverified |
 | `Get_Tgenerator_Amplitude_State` | `:TGENerator:AMPLitude:STATe?` | — | BOOL → `…/Reading/Get_Tgenerator_Amplitude_State` | TGEN | unverified |
 | `Get_Tgenerator_Amplitude_Step` | `:TGENerator:AMPLitude:STEP?` | — | NR1 → `…/Reading/Get_Tgenerator_Amplitude_Step` | TGEN | unverified |
