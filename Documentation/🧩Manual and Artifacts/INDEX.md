@@ -9,5 +9,6 @@ How to use it and how it is built.
 |---|---|
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Architecture — INSTRUMENT.Spectrum |
 | [SDK.md](SDK.md) | SDK — INSTRUMENT.Spectrum |
+| [SMOKE.md](SMOKE.md) | Smoke test — INSTRUMENT.Spectrum |
 | [SDK/](SDK/) | folder |
 <!-- /wiki:index -->
