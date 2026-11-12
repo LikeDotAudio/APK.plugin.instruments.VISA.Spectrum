@@ -78,7 +78,7 @@ mosquitto_pub -t "$T" -m '{"value": <value>}'
 
 A read's answer is published on `<box>/Reading/<command>` (the **Out** column below); `<box>` is `APK.audio/System/Protocols/visa/Device/<Family>/<Model>/<Dev…>`.
 
-## Commands (326) — inputs and outputs of the API
+## Commands (386) — inputs and outputs of the API
 
 **In** is what the command takes; **Out** is what it gives back and where. Every command arrives on `APK.audio/Gui/Komands/Spectrum/<Command>`.
 
@@ -174,7 +174,7 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Get_Unit_Power_Emf` | `:UNIT:POWer:EMF?` | — | BOOL → `…/Reading/Get_Unit_Power_Emf` | UNIT | unverified |
 | `Get_Unit_Power` | `:UNIT:POWer?` | — | → `…/Reading/Get_Unit_Power` | UNIT | unverified |
 
-### `set` — writes one value (82)
+### `set` — writes one value (142)
 
 | Command | SCPI | In | Out | Group | |
 |---|---|---|---|---|---|
@@ -185,23 +185,43 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Set_Bwidth_Video` | `BWIDth:VIDeo <value>` | `value`: unknown | — | BWID | unverified |
 | `Set_Bwidth_Video_Ratio` | `BWIDth:VIDeo:RATio <value>` | `value`: numeric | — | BWID | unverified |
 | `Set_Calculate_Lline_State` | `:CALCulate:LLINe1:STATe <value>` | `value`: `OFF` · `ON` | — | CALC | unverified |
+| `Set_Calculate_Lline_State_OFF` | `:CALCulate:LLINe1:STATe OFF` | — | — | CALC | unverified |
+| `Set_Calculate_Lline_State_ON` | `:CALCulate:LLINe1:STATe ON` | — | — | CALC | unverified |
 | `Set_Marker_State` | `:CALCulate:MARKer<marker_number>:STATe <state_bool>` | `state_bool`: `OFF` · `ON` | — | Marker Command Sets |  |
 | `Set_Marker_X_position` | `:CALCulate:MARKer<marker_number>:X <hz_value>` | `hz_value`: numeric | — | Marker Command Sets |  |
+| `Set_Debug_Ftp_0` | `:DEBug:FTP 0` | — | — | Debug Remote | unverified |
+| `Set_Debug_Ftp_1` | `:DEBug:FTP 1` | — | — | Debug Remote | unverified |
 | `Set_Demod_Am_State` | `:DEMod:AM:STATe <value>` | `value`: `OFF` · `ON` | — | DEM | unverified |
+| `Set_Demod_Am_State_OFF` | `:DEMod:AM:STATe OFF` | — | — | DEM | unverified |
+| `Set_Demod_Am_State_ON` | `:DEMod:AM:STATe ON` | — | — | DEM | unverified |
 | `Set_Demod_Fm_State` | `:DEMod:FM:STATe <value>` | `value`: `OFF` · `ON` | — | DEM | unverified |
+| `Set_Demod_Fm_State_OFF` | `:DEMod:FM:STATe OFF` | — | — | DEM | unverified |
+| `Set_Demod_Fm_State_ON` | `:DEMod:FM:STATe ON` | — | — | DEM | unverified |
 | `Set_Display_Mode_Brightness` | `:DISPlay:MODE:BRIGhtness <value>` | `value`: unknown | — | DISP | unverified |
 | `Set_Reference_Level` | `:DISPlay:WINDow:TRACe:Y:RLEVel <dbm_value>` | `dbm_value`: numeric V | — | Individual Power Sets |  |
 | `Set_Scale_Pdivision` | `:DISPlay:WINDow:TRACe:Y:SCALe:PDIVision <value>` | `value`: unknown | — | SCAL | unverified |
 | `Set_Scale_Rlevel_Offset` | `:DISPlay:WINDow:TRACe:Y:SCALe:RLEVel:OFFSet <value>` | `value`: numeric V | — | SCAL | unverified |
 | `Set_Scale_Spacing` | `:DISPlay:WINDow:TRACe:Y:SCALe:SPACing <value>` | `value`: unknown | — | SCAL | unverified |
 | `Set_Fcount_State` | `FCOunt:STATe <value>` | `value`: `OFF` · `ON` | — | FCO | unverified |
+| `Set_Fcount_State_OFF` | `FCOunt:STATe OFF` | — | — | FCO | unverified |
+| `Set_Fcount_State_ON` | `FCOunt:STATe ON` | — | — | FCO | unverified |
 | `Set_Center_Freq_MHz` | `:FREQuency:CENTer <hz_value>` | `hz_value`: numeric | — | RIG Frequency commands |  |
 | `Set_Span_Frequency` | `:FREQuency:SPAN <hz_value>` | `hz_value`: numeric | — | RIG Frequency commands |  |
 | `Set_Start_Freq_MHz` | `:FREQuency:STARt <hz_value>` | `hz_value`: numeric | — | RIG Frequency commands |  |
 | `Set_Stop_Freq_MHz` | `:FREQuency:STOP <hz_value>` | `hz_value`: numeric | — | RIG Frequency commands |  |
 | `Set_Continuous_Mode` | `:INITiate:CONTinuous <state_bool>` | `state_bool`: `OFF` · `ON` | — | Trace Command Sets |  |
+| `Set_Continuous_Mode_OFF` | `:INITiate:CONTinuous OFF` | — | — | Trace Command Sets | unverified |
+| `Set_Continuous_Mode_ON` | `:INITiate:CONTinuous ON` | — | — | Trace Command Sets | unverified |
 | `Set_Instrument_Measure` | `:INSTrument:MEASure <value>` | `value`: `CHP` · `ACPR` · `OBW` · `SEM` | — | INST | unverified |
+| `Set_Instrument_Measure_ACPR` | `:INSTrument:MEASure ACPR` | — | — | INST | unverified |
+| `Set_Instrument_Measure_CHP` | `:INSTrument:MEASure CHP` | — | — | INST | unverified |
+| `Set_Instrument_Measure_OBW` | `:INSTrument:MEASure OBW` | — | — | INST | unverified |
+| `Set_Instrument_Measure_SEM` | `:INSTrument:MEASure SEM` | — | — | INST | unverified |
 | `Set_Instrument_Select` | `:INSTrument:SELect <value>` | `value`: `SA` · `TGEN` · `DAN` · `POW` | — | INST | unverified |
+| `Set_Instrument_Select_DAN` | `:INSTrument:SELect DAN` | — | — | INST | unverified |
+| `Set_Instrument_Select_POW` | `:INSTrument:SELect POW` | — | — | INST | unverified |
+| `Set_Instrument_Select_SA` | `:INSTrument:SELect SA` | — | — | INST | unverified |
+| `Set_Instrument_Select_TGEN` | `:INSTrument:SELect TGEN` | — | — | INST | unverified |
 | `Set_Measure_Acpr_Adjacent` | `:MEASure:ACPR:ADJacent <value>` | `value`: unknown | — | MEAS | unverified |
 | `Set_Measure_Acpr_Center` | `:MEASure:ACPR:CENTer <value>` | `value`: numeric | — | MEAS | unverified |
 | `Set_Measure_Acpr_Main` | `:MEASure:ACPR:MAIN <value>` | `value`: unknown | — | MEAS | unverified |
@@ -210,10 +230,14 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Set_Measure_Chpower_Ibw` | `:MEASure:CHPower:IBW <value>` | `value`: unknown | — | MEAS | unverified |
 | `Set_Measure_Chpower_Span` | `:MEASure:CHPower:SPAN <value>` | `value`: numeric | — | MEAS | unverified |
 | `Set_Measure_Obw_Method` | `:MEASure:OBW:METHod <value>` | `value`: `PERC` · `XDB` | — | MEAS | unverified |
+| `Set_Measure_Obw_Method_PERC` | `:MEASure:OBW:METHod PERC` | — | — | MEAS | unverified |
+| `Set_Measure_Obw_Method_XDB` | `:MEASure:OBW:METHod XDB` | — | — | MEAS | unverified |
 | `Set_Measure_Obw_Percent` | `:MEASure:OBW:PERCent <value>` | `value`: numeric s | — | MEAS | unverified |
 | `Set_Measure_Obw_Xdb` | `:MEASure:OBW:XDB <value>` | `value`: numeric | — | MEAS | unverified |
 | `Set_Measure_Semask_Average_Count` | `:MEASure:SEMask:AVERage:COUNt <value>` | `value`: integer | — | MEAS | unverified |
 | `Set_Measure_Semask_Average_State` | `:MEASure:SEMask:AVERage:STATe <value>` | `value`: `OFF` · `ON` | — | MEAS | unverified |
+| `Set_Measure_Semask_Average_State_OFF` | `:MEASure:SEMask:AVERage:STATe OFF` | — | — | MEAS | unverified |
+| `Set_Measure_Semask_Average_State_ON` | `:MEASure:SEMask:AVERage:STATe ON` | — | — | MEAS | unverified |
 | `Set_Measure_Semask_Carrier_Power` | `:MEASure:SEMask:CARRier:POWer <value>` | `value`: unknown | — | MEAS | unverified |
 | `Set_Measure_Semask_Frequency_Center` | `MEASure:SEMask:FREQuency:CENTer <value>` | `value`: numeric | — | MEAS | unverified |
 | `Set_Measure_Semask_Frequency_Span` | `:MEASure:SEMask:FREQuency:SPAN <value>` | `value`: numeric | — | MEAS | unverified |
@@ -221,11 +245,15 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Set_Measure_Semask_Offset_List_Start_Absolute` | `:MEASure:SEMask:OFFSet:LIST:STARt:ABSolute <value>` | `value`: unknown | — | MEAS | unverified |
 | `Set_Measure_Semask_Offset_List_Start_Rcarrier` | `:MEASure:SEMask:OFFSet:LIST:STARt:RCARrier <value>` | `value`: unknown | — | MEAS | unverified |
 | `Set_Measure_Semask_Offset_List_State` | `:MEASure:SEMask:OFFSet:LIST:STATe <value>` | `value`: `OFF` · `ON` | — | MEAS | unverified |
+| `Set_Measure_Semask_Offset_List_State_OFF` | `:MEASure:SEMask:OFFSet:LIST:STATe OFF` | — | — | MEAS | unverified |
+| `Set_Measure_Semask_Offset_List_State_ON` | `:MEASure:SEMask:OFFSet:LIST:STATe ON` | — | — | MEAS | unverified |
 | `Set_Measure_Semask_Offset_List_Sweep` | `:MEASure:SEMask:OFFSet:LIST:SWEeptime <value>` | `value`: numeric 0.005…4000 s | — | MEAS | unverified |
 | `Set_Measure_Semask_Offset_List_Test` | `:MEASure:SEMask:OFFSet:LIST:TEST <value>` | `value`: unknown | — | MEAS | unverified |
 | `Set_Measure_Semask_Sweep` | `:MEASure:SEMask:SWEeptime <value>` | `value`: numeric 0.00837…4000 s | — | MEAS | unverified |
 | `Set_Power_Attenuation` | `:POWer:ATTenuation <db_value>` | `db_value`: numeric dB | — | Individual Power Sets |  |
 | `Set_Sense_Frequency_Center` | `SENS:FREQ:CENT <value>` | `value`: `UP` · `DOWN` | — | SENS | unverified |
+| `Set_Sense_Frequency_Center_DOWN` | `SENS:FREQ:CENT DOWN` | — | — | SENS | unverified |
+| `Set_Sense_Frequency_Center_UP` | `SENS:FREQ:CENT UP` | — | — | SENS | unverified |
 | `Set_Sense_Frequency_Span` | `SENS:FREQ:SPAN <value>` | `value`: numeric Hz | — | SENS | unverified |
 | `Set_Sense_Frequency_Start` | `SENS:FREQ:STAR <value>` | `value`: numeric Hz | — | SENS | unverified |
 | `Set_Sense_Frequency_Stop` | `:SENS:FREQ:STOP <value>` | `value`: numeric Hz | — | SENS | unverified |
@@ -233,33 +261,65 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Set_Averaging_State` | `:SENSe:AVERage:TRACe<trace_number>:STATe <state_bool>` | `state_bool`: `OFF` · `ON` | — | Trace |  |
 | `Set_RBW` | `:SENSe:BANDwidth:RESolution <hz_value>` | `hz_value`: numeric Hz | — | RIG Bandwidth Commands |  |
 | `Set_RBW_Auto` | `:SENSe:BANDwidth:RESolution:AUTO <state_bool>` | `state_bool`: `OFF` · `ON` | — | RIG Bandwidth Commands |  |
+| `Set_RBW_Auto_OFF` | `:SENSe:BANDwidth:RESolution:AUTO OFF` | — | — | RIG Bandwidth Commands | unverified |
+| `Set_RBW_Auto_ON` | `:SENSe:BANDwidth:RESolution:AUTO ON` | — | — | RIG Bandwidth Commands | unverified |
 | `Set_VBW` | `:SENSe:BANDwidth:VIDeo <hz_value>` | `hz_value`: numeric Hz | — | RIG Bandwidth Commands |  |
 | `Set_VBW_Auto` | `:SENSe:BANDwidth:VIDeo:AUTO <state_bool>` | `state_bool`: `OFF` · `ON` | — | RIG Bandwidth Commands |  |
+| `Set_VBW_Auto_OFF` | `:SENSe:BANDwidth:VIDeo:AUTO OFF` | — | — | RIG Bandwidth Commands | unverified |
+| `Set_VBW_Auto_ON` | `:SENSe:BANDwidth:VIDeo:AUTO ON` | — | — | RIG Bandwidth Commands | unverified |
 | `Set_Sense_Frequency_Center_Step_Increment` | `:SENSe:FREQuency:CENTer:STEP:INCRement <value>` | `value`: unknown | — | SENS | unverified |
 | `Set_Sense_Power_Rf_Attenuation` | `:SENSe:POWer:RF:ATTenuation <value>` | `value`: numeric dB | — | SENS | unverified |
 | `Set_Sense_Power_Rf_Gain_State` | `:SENSe:POWer:RF:GAIN:STATe <value>` | `value`: `OFF` · `ON` | — | SENS | unverified |
+| `Set_Sense_Power_Rf_Gain_State_OFF` | `:SENSe:POWer:RF:GAIN:STATe OFF` | — | — | SENS | unverified |
+| `Set_Sense_Power_Rf_Gain_State_ON` | `:SENSe:POWer:RF:GAIN:STATe ON` | — | — | SENS | unverified |
 | `Set_Sense_Sweep_Tdmode` | `:SENSe:SWEep:TDMode <value>` | `value`: unknown | — | SENS | unverified |
 | `Set_Sweep_time` | `:SENSe:SWEep:TIME <s_value>` | `s_value`: numeric s | — | RIG Bandwidth Commands |  |
 | `Set_Sweep_time_Auto` | `:SENSe:SWEep:TIME:AUTO <state_bool>` | `state_bool`: `OFF` · `ON` | — | RIG Bandwidth Commands |  |
+| `Set_Sweep_time_Auto_OFF` | `:SENSe:SWEep:TIME:AUTO OFF` | — | — | RIG Bandwidth Commands | unverified |
+| `Set_Sweep_time_Auto_ON` | `:SENSe:SWEep:TIME:AUTO ON` | — | — | RIG Bandwidth Commands | unverified |
 | `Set_System_Channel` | `:SYSTem:CHANnel <value>` | `value`: `OFF` · `ON` | — | SYST | unverified |
+| `Set_System_Channel_OFF` | `:SYSTem:CHANnel OFF` | — | — | SYST | unverified |
+| `Set_System_Channel_ON` | `:SYSTem:CHANnel ON` | — | — | SYST | unverified |
 | `Set_System_Configure_Port` | `:SYSTem:CONFigure:PORT <value>` | `value`: `REF` · `TRIG` | — | SYST | unverified |
+| `Set_System_Configure_Port_REF` | `:SYSTem:CONFigure:PORT REF` | — | — | SYST | unverified |
+| `Set_System_Configure_Port_TRIG` | `:SYSTem:CONFigure:PORT TRIG` | — | — | SYST | unverified |
 | `Set_System_Date` | `:SYSTem:DATE <value>` | `value`: unknown | — | SYST | unverified |
 | `Set_System_Time` | `:SYSTem:TIME <value>` | `value`: numeric s | — | SYST | unverified |
 | `Set_Tgenerator_Amplitude` | `:TGENerator:AMPLitude <value>` | `value`: unknown | — | TGEN | unverified |
 | `Set_Tgenerator_Amplitude_State` | `:TGENerator:AMPLitude:STATe <value>` | `value`: `OFF` · `ON` | — | TGEN | unverified |
+| `Set_Tgenerator_Amplitude_State_OFF` | `:TGENerator:AMPLitude:STATe OFF` | — | — | TGEN | unverified |
+| `Set_Tgenerator_Amplitude_State_ON` | `:TGENerator:AMPLitude:STATe ON` | — | — | TGEN | unverified |
 | `Set_Tgenerator_Amplitude_Step` | `:TGENerator:AMPLitude:STEP <value>` | `value`: integer | — | TGEN | unverified |
 | `Set_Tgenerator_Normalize_Level` | `:TGENerator:NORMalize:LEVel <value>` | `value`: numeric | — | TGEN | unverified |
 | `Set_Tgenerator_Normalize_Posn` | `:TGENerator:NORMalize:POSN <value>` | `value`: numeric | — | TGEN | unverified |
 | `Set_Tgenerator_Normalize_State` | `:TGENerator:NORMalize:STATe <value>` | `value`: `OFF` · `ON` | — | TGEN | unverified |
+| `Set_Tgenerator_Normalize_State_OFF` | `:TGENerator:NORMalize:STATe OFF` | — | — | TGEN | unverified |
+| `Set_Tgenerator_Normalize_State_ON` | `:TGENerator:NORMalize:STATe ON` | — | — | TGEN | unverified |
 | `Set_Tgenerator_Normalize_Trace` | `:TGENerator:NORMalize:TRACe <value>` | `value`: block | — | TGEN | unverified |
 | `Set_Trace_Format` | `:TRACe:FORMat <value>` | `value`: `ASC` · `REAL` | — | TRAC | unverified |
+| `Set_Trace_Format_ASC` | `:TRACe:FORMat ASC` | — | — | TRAC | unverified |
+| `Set_Trace_Format_REAL` | `:TRACe:FORMat REAL` | — | — | TRAC | unverified |
 | `Set_Trace_Mode` | `:TRACe<trace_number>:MODE <mode_string>` | `mode_string`: `WRIT` · `MAXH` · `MINH` · `VIEW` · `BLAN` | — | Trace Command Sets |  |
 | `Set_Trigger_Sequence_Delaytime` | `:TRIGger:SEQuence:DELaytime <value>` | `value`: numeric s | — | TRIG | unverified |
 | `Set_Trigger_Sequence_External_Slope` | `:TRIGger:SEQuence:EXTernal1:SLOPe <value>` | `value`: `POS` · `NEG` | — | TRIG | unverified |
+| `Set_Trigger_Sequence_External_Slope_NEG` | `:TRIGger:SEQuence:EXTernal1:SLOPe NEG` | — | — | TRIG | unverified |
+| `Set_Trigger_Sequence_External_Slope_POS` | `:TRIGger:SEQuence:EXTernal1:SLOPe POS` | — | — | TRIG | unverified |
 | `Set_Trigger_Sequence_Source` | `:TRIGger:SEQuence:SOURce <value>` | `value`: `IMM` · `VID` · `EXT` | — | TRIG | unverified |
+| `Set_Trigger_Sequence_Source_EXT` | `:TRIGger:SEQuence:SOURce EXT` | — | — | TRIG | unverified |
+| `Set_Trigger_Sequence_Source_IMM` | `:TRIGger:SEQuence:SOURce IMM` | — | — | TRIG | unverified |
+| `Set_Trigger_Sequence_Source_VID` | `:TRIGger:SEQuence:SOURce VID` | — | — | TRIG | unverified |
 | `Set_Trigger_Sequence_Video_Level` | `:TRIGger:SEQuence:VIDeo:LEVel <value>` | `value`: numeric | — | TRIG | unverified |
 | `Set_Unit_Power` | `UNIT:POW <value>` | `value`: `DBM` · `DBMV` · `DBUV` · `DBUA` · `V` · `W` · `A` | — | UNIT | unverified |
+| `Set_Unit_Power_A` | `UNIT:POW A` | — | — | UNIT | unverified |
+| `Set_Unit_Power_DBM` | `UNIT:POW DBM` | — | — | UNIT | unverified |
+| `Set_Unit_Power_DBMV` | `UNIT:POW DBMV` | — | — | UNIT | unverified |
+| `Set_Unit_Power_DBUA` | `UNIT:POW DBUA` | — | — | UNIT | unverified |
+| `Set_Unit_Power_DBUV` | `UNIT:POW DBUV` | — | — | UNIT | unverified |
+| `Set_Unit_Power_V` | `UNIT:POW V` | — | — | UNIT | unverified |
+| `Set_Unit_Power_W` | `UNIT:POW W` | — | — | UNIT | unverified |
 | `Set_Unit_Power_Emf` | `:UNIT:POWer:EMF <value>` | `value`: `OFF` · `ON` | — | UNIT | unverified |
+| `Set_Unit_Power_Emf_OFF` | `:UNIT:POWer:EMF OFF` | — | — | UNIT | unverified |
+| `Set_Unit_Power_Emf_ON` | `:UNIT:POWer:EMF ON` | — | — | UNIT | unverified |
 
 ### `nab` — reads more than one thing (observation, telemetry) (101)
 

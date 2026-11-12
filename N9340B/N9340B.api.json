@@ -110,9 +110,9 @@
     "do": "Zero-argument execution actions and trigger commands"
   },
   "summary": {
-    "total_commands": 256,
+    "total_commands": 316,
     "get_count": 101,
-    "set_count": 85,
+    "set_count": 145,
     "nab_count": 115,
     "rig_count": 3,
     "do_count": 53
@@ -2999,6 +2999,54 @@
         },
         "unverified": true
       },
+      "Set_Calculate_Lline_State_OFF": {
+        "command": "Set_Calculate_Lline_State_OFF",
+        "verb": "set",
+        "description": "Set_Calculate_Lline_State \u2192 OFF. Limit Line Testing",
+        "scpi": ":CALCulate:LLINe1:STATe OFF",
+        "scpi_fast": ":CALC:LLIN1:STAT OFF",
+        "subsystem": "CALC",
+        "group": "CALC",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Calculate_Lline_State_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Calculate_Lline_State_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Calculate_Lline_State_ON": {
+        "command": "Set_Calculate_Lline_State_ON",
+        "verb": "set",
+        "description": "Set_Calculate_Lline_State \u2192 ON. Limit Line Testing",
+        "scpi": ":CALCulate:LLINe1:STATe ON",
+        "scpi_fast": ":CALC:LLIN1:STAT ON",
+        "subsystem": "CALC",
+        "group": "CALC",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Calculate_Lline_State_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Calculate_Lline_State_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Marker_State": {
         "command": "Set_Marker_State",
         "verb": "set",
@@ -3054,6 +3102,52 @@
           }
         },
         "unverified": false
+      },
+      "Set_Debug_Ftp_0": {
+        "command": "Set_Debug_Ftp_0",
+        "verb": "set",
+        "description": "Set_Debug_Ftp \u2192 0. Turn the instrument's FTP server on or off.",
+        "scpi": ":DEBug:FTP 0",
+        "subsystem": "Debug",
+        "group": "Debug Remote",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Debug_Ftp_0",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Debug_Ftp_0",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Debug_Ftp_1": {
+        "command": "Set_Debug_Ftp_1",
+        "verb": "set",
+        "description": "Set_Debug_Ftp \u2192 1. Turn the instrument's FTP server on or off.",
+        "scpi": ":DEBug:FTP 1",
+        "subsystem": "Debug",
+        "group": "Debug Remote",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Debug_Ftp_1",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Debug_Ftp_1",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "Set_Debug_Ftp": {
         "command": "Set_Debug_Ftp",
@@ -3164,6 +3258,54 @@
         },
         "unverified": true
       },
+      "Set_Demod_Am_State_OFF": {
+        "command": "Set_Demod_Am_State_OFF",
+        "verb": "set",
+        "description": "Set_Demod_Am_State \u2192 OFF. AM Demodulation",
+        "scpi": ":DEMod:AM:STATe OFF",
+        "scpi_fast": ":DEM:AM:STAT OFF",
+        "subsystem": "DEM",
+        "group": "DEM",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Demod_Am_State_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Demod_Am_State_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Demod_Am_State_ON": {
+        "command": "Set_Demod_Am_State_ON",
+        "verb": "set",
+        "description": "Set_Demod_Am_State \u2192 ON. AM Demodulation",
+        "scpi": ":DEMod:AM:STATe ON",
+        "scpi_fast": ":DEM:AM:STAT ON",
+        "subsystem": "DEM",
+        "group": "DEM",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Demod_Am_State_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Demod_Am_State_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Demod_Fm_State": {
         "command": "Set_Demod_Fm_State",
         "verb": "set",
@@ -3188,6 +3330,54 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Demod_Fm_State",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Demod_Fm_State_OFF": {
+        "command": "Set_Demod_Fm_State_OFF",
+        "verb": "set",
+        "description": "Set_Demod_Fm_State \u2192 OFF. FM Demodulation",
+        "scpi": ":DEMod:FM:STATe OFF",
+        "scpi_fast": ":DEM:FM:STAT OFF",
+        "subsystem": "DEM",
+        "group": "DEM",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Demod_Fm_State_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Demod_Fm_State_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Demod_Fm_State_ON": {
+        "command": "Set_Demod_Fm_State_ON",
+        "verb": "set",
+        "description": "Set_Demod_Fm_State \u2192 ON. FM Demodulation",
+        "scpi": ":DEMod:FM:STATe ON",
+        "scpi_fast": ":DEM:FM:STAT ON",
+        "subsystem": "DEM",
+        "group": "DEM",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Demod_Fm_State_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Demod_Fm_State_ON",
             "value": "<value>",
             "input_name": "value"
           }
@@ -3356,6 +3546,54 @@
         },
         "unverified": true
       },
+      "Set_Fcount_State_OFF": {
+        "command": "Set_Fcount_State_OFF",
+        "verb": "set",
+        "description": "Set_Fcount_State \u2192 OFF. Frequency Counter Marker",
+        "scpi": "FCOunt:STATe OFF",
+        "scpi_fast": "FCO:STAT OFF",
+        "subsystem": "FCO",
+        "group": "FCO",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Fcount_State_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Fcount_State_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Fcount_State_ON": {
+        "command": "Set_Fcount_State_ON",
+        "verb": "set",
+        "description": "Set_Fcount_State \u2192 ON. Frequency Counter Marker",
+        "scpi": "FCOunt:STATe ON",
+        "scpi_fast": "FCO:STAT ON",
+        "subsystem": "FCO",
+        "group": "FCO",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Fcount_State_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Fcount_State_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Center_Freq_MHz": {
         "command": "Set_Center_Freq_MHz",
         "verb": "set",
@@ -3490,6 +3728,54 @@
         },
         "unverified": false
       },
+      "Set_Continuous_Mode_OFF": {
+        "command": "Set_Continuous_Mode_OFF",
+        "verb": "set",
+        "description": "Set_Continuous_Mode \u2192 OFF. Set Continuous Mode",
+        "scpi": ":INITiate:CONTinuous OFF",
+        "scpi_fast": ":INIT:CONT OFF",
+        "subsystem": "Trace",
+        "group": "Trace Command Sets",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Continuous_Mode_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Continuous_Mode_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Continuous_Mode_ON": {
+        "command": "Set_Continuous_Mode_ON",
+        "verb": "set",
+        "description": "Set_Continuous_Mode \u2192 ON. Set Continuous Mode",
+        "scpi": ":INITiate:CONTinuous ON",
+        "scpi_fast": ":INIT:CONT ON",
+        "subsystem": "Trace",
+        "group": "Trace Command Sets",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Continuous_Mode_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Continuous_Mode_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Instrument_Measure": {
         "command": "Set_Instrument_Measure",
         "verb": "set",
@@ -3522,6 +3808,102 @@
         },
         "unverified": true
       },
+      "Set_Instrument_Measure_ACPR": {
+        "command": "Set_Instrument_Measure_ACPR",
+        "verb": "set",
+        "description": "Set_Instrument_Measure \u2192 ACPR. Power Measurement",
+        "scpi": ":INSTrument:MEASure ACPR",
+        "scpi_fast": ":INST:MEAS ACPR",
+        "subsystem": "INST",
+        "group": "INST",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Instrument_Measure_ACPR",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Instrument_Measure_ACPR",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Instrument_Measure_CHP": {
+        "command": "Set_Instrument_Measure_CHP",
+        "verb": "set",
+        "description": "Set_Instrument_Measure \u2192 CHP. Power Measurement",
+        "scpi": ":INSTrument:MEASure CHP",
+        "scpi_fast": ":INST:MEAS CHP",
+        "subsystem": "INST",
+        "group": "INST",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Instrument_Measure_CHP",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Instrument_Measure_CHP",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Instrument_Measure_OBW": {
+        "command": "Set_Instrument_Measure_OBW",
+        "verb": "set",
+        "description": "Set_Instrument_Measure \u2192 OBW. Power Measurement",
+        "scpi": ":INSTrument:MEASure OBW",
+        "scpi_fast": ":INST:MEAS OBW",
+        "subsystem": "INST",
+        "group": "INST",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Instrument_Measure_OBW",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Instrument_Measure_OBW",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Instrument_Measure_SEM": {
+        "command": "Set_Instrument_Measure_SEM",
+        "verb": "set",
+        "description": "Set_Instrument_Measure \u2192 SEM. Power Measurement",
+        "scpi": ":INSTrument:MEASure SEM",
+        "scpi_fast": ":INST:MEAS SEM",
+        "subsystem": "INST",
+        "group": "INST",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Instrument_Measure_SEM",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Instrument_Measure_SEM",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Instrument_Select": {
         "command": "Set_Instrument_Select",
         "verb": "set",
@@ -3548,6 +3930,102 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Instrument_Select",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Instrument_Select_DAN": {
+        "command": "Set_Instrument_Select_DAN",
+        "verb": "set",
+        "description": "Set_Instrument_Select \u2192 DAN. Instrument Mode",
+        "scpi": ":INSTrument:SELect DAN",
+        "scpi_fast": ":INST:SEL DAN",
+        "subsystem": "INST",
+        "group": "INST",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Instrument_Select_DAN",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Instrument_Select_DAN",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Instrument_Select_POW": {
+        "command": "Set_Instrument_Select_POW",
+        "verb": "set",
+        "description": "Set_Instrument_Select \u2192 POW. Instrument Mode",
+        "scpi": ":INSTrument:SELect POW",
+        "scpi_fast": ":INST:SEL POW",
+        "subsystem": "INST",
+        "group": "INST",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Instrument_Select_POW",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Instrument_Select_POW",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Instrument_Select_SA": {
+        "command": "Set_Instrument_Select_SA",
+        "verb": "set",
+        "description": "Set_Instrument_Select \u2192 SA. Instrument Mode",
+        "scpi": ":INSTrument:SELect SA",
+        "scpi_fast": ":INST:SEL SA",
+        "subsystem": "INST",
+        "group": "INST",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Instrument_Select_SA",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Instrument_Select_SA",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Instrument_Select_TGEN": {
+        "command": "Set_Instrument_Select_TGEN",
+        "verb": "set",
+        "description": "Set_Instrument_Select \u2192 TGEN. Instrument Mode",
+        "scpi": ":INSTrument:SELect TGEN",
+        "scpi_fast": ":INST:SEL TGEN",
+        "subsystem": "INST",
+        "group": "INST",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Instrument_Select_TGEN",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Instrument_Select_TGEN",
             "value": "<value>",
             "input_name": "value"
           }
@@ -3766,6 +4244,54 @@
         },
         "unverified": true
       },
+      "Set_Measure_Obw_Method_PERC": {
+        "command": "Set_Measure_Obw_Method_PERC",
+        "verb": "set",
+        "description": "Set_Measure_Obw_Method \u2192 PERC. Select the measurement method of OBW",
+        "scpi": ":MEASure:OBW:METHod PERC",
+        "scpi_fast": ":MEAS:OBW:METH PERC",
+        "subsystem": "MEAS",
+        "group": "MEAS",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Measure_Obw_Method_PERC",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Obw_Method_PERC",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Obw_Method_XDB": {
+        "command": "Set_Measure_Obw_Method_XDB",
+        "verb": "set",
+        "description": "Set_Measure_Obw_Method \u2192 XDB. Select the measurement method of OBW",
+        "scpi": ":MEASure:OBW:METHod XDB",
+        "scpi_fast": ":MEAS:OBW:METH XDB",
+        "subsystem": "MEAS",
+        "group": "MEAS",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Measure_Obw_Method_XDB",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Obw_Method_XDB",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Measure_Obw_Percent": {
         "command": "Set_Measure_Obw_Percent",
         "verb": "set",
@@ -3869,6 +4395,54 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Measure_Semask_Average_State",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Semask_Average_State_OFF": {
+        "command": "Set_Measure_Semask_Average_State_OFF",
+        "verb": "set",
+        "description": "Set_Measure_Semask_Average_State \u2192 OFF. Set the Average",
+        "scpi": ":MEASure:SEMask:AVERage:STATe OFF",
+        "scpi_fast": ":MEAS:SEM:AVER:STAT OFF",
+        "subsystem": "MEAS",
+        "group": "MEAS",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Measure_Semask_Average_State_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Semask_Average_State_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Semask_Average_State_ON": {
+        "command": "Set_Measure_Semask_Average_State_ON",
+        "verb": "set",
+        "description": "Set_Measure_Semask_Average_State \u2192 ON. Set the Average",
+        "scpi": ":MEASure:SEMask:AVERage:STATe ON",
+        "scpi_fast": ":MEAS:SEM:AVER:STAT ON",
+        "subsystem": "MEAS",
+        "group": "MEAS",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Measure_Semask_Average_State_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Semask_Average_State_ON",
             "value": "<value>",
             "input_name": "value"
           }
@@ -4061,6 +4635,54 @@
         },
         "unverified": true
       },
+      "Set_Measure_Semask_Offset_List_State_OFF": {
+        "command": "Set_Measure_Semask_Offset_List_State_OFF",
+        "verb": "set",
+        "description": "Set_Measure_Semask_Offset_List_State \u2192 OFF. Set the Start Freq",
+        "scpi": ":MEASure:SEMask:OFFSet:LIST:STATe OFF",
+        "scpi_fast": ":MEAS:SEM:OFFS:LIST:STAT OFF",
+        "subsystem": "MEAS",
+        "group": "MEAS",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Measure_Semask_Offset_List_State_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Semask_Offset_List_State_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Semask_Offset_List_State_ON": {
+        "command": "Set_Measure_Semask_Offset_List_State_ON",
+        "verb": "set",
+        "description": "Set_Measure_Semask_Offset_List_State \u2192 ON. Set the Start Freq",
+        "scpi": ":MEASure:SEMask:OFFSet:LIST:STATe ON",
+        "scpi_fast": ":MEAS:SEM:OFFS:LIST:STAT ON",
+        "subsystem": "MEAS",
+        "group": "MEAS",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Measure_Semask_Offset_List_State_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Semask_Offset_List_State_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Measure_Semask_Offset_List_Sweep": {
         "command": "Set_Measure_Semask_Offset_List_Sweep",
         "verb": "set",
@@ -4195,6 +4817,52 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Sense_Frequency_Center",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Sense_Frequency_Center_DOWN": {
+        "command": "Set_Sense_Frequency_Center_DOWN",
+        "verb": "set",
+        "description": "Set_Sense_Frequency_Center \u2192 DOWN. Using C with Marker Peak Search and Peak Excursion",
+        "scpi": "SENS:FREQ:CENT DOWN",
+        "subsystem": "SENS",
+        "group": "SENS",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Sense_Frequency_Center_DOWN",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Sense_Frequency_Center_DOWN",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Sense_Frequency_Center_UP": {
+        "command": "Set_Sense_Frequency_Center_UP",
+        "verb": "set",
+        "description": "Set_Sense_Frequency_Center \u2192 UP. Using C with Marker Peak Search and Peak Excursion",
+        "scpi": "SENS:FREQ:CENT UP",
+        "subsystem": "SENS",
+        "group": "SENS",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Sense_Frequency_Center_UP",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Sense_Frequency_Center_UP",
             "value": "<value>",
             "input_name": "value"
           }
@@ -4392,6 +5060,54 @@
         },
         "unverified": false
       },
+      "Set_RBW_Auto_OFF": {
+        "command": "Set_RBW_Auto_OFF",
+        "verb": "set",
+        "description": "Set_RBW_Auto \u2192 OFF. Set RBW Auto",
+        "scpi": ":SENSe:BANDwidth:RESolution:AUTO OFF",
+        "scpi_fast": ":SENS:BAND:RES:AUTO OFF",
+        "subsystem": "Bandwidth",
+        "group": "RIG Bandwidth Commands",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_RBW_Auto_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_RBW_Auto_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_RBW_Auto_ON": {
+        "command": "Set_RBW_Auto_ON",
+        "verb": "set",
+        "description": "Set_RBW_Auto \u2192 ON. Set RBW Auto",
+        "scpi": ":SENSe:BANDwidth:RESolution:AUTO ON",
+        "scpi_fast": ":SENS:BAND:RES:AUTO ON",
+        "subsystem": "Bandwidth",
+        "group": "RIG Bandwidth Commands",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_RBW_Auto_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_RBW_Auto_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_VBW": {
         "command": "Set_VBW",
         "verb": "set",
@@ -4448,6 +5164,54 @@
           }
         },
         "unverified": false
+      },
+      "Set_VBW_Auto_OFF": {
+        "command": "Set_VBW_Auto_OFF",
+        "verb": "set",
+        "description": "Set_VBW_Auto \u2192 OFF. Set VBW Auto",
+        "scpi": ":SENSe:BANDwidth:VIDeo:AUTO OFF",
+        "scpi_fast": ":SENS:BAND:VID:AUTO OFF",
+        "subsystem": "Bandwidth",
+        "group": "RIG Bandwidth Commands",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_VBW_Auto_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_VBW_Auto_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_VBW_Auto_ON": {
+        "command": "Set_VBW_Auto_ON",
+        "verb": "set",
+        "description": "Set_VBW_Auto \u2192 ON. Set VBW Auto",
+        "scpi": ":SENSe:BANDwidth:VIDeo:AUTO ON",
+        "scpi_fast": ":SENS:BAND:VID:AUTO ON",
+        "subsystem": "Bandwidth",
+        "group": "RIG Bandwidth Commands",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_VBW_Auto_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_VBW_Auto_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "Set_Sense_Frequency_Center_Step_Increment": {
         "command": "Set_Sense_Frequency_Center_Step_Increment",
@@ -4526,6 +5290,54 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Sense_Power_Rf_Gain_State",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Sense_Power_Rf_Gain_State_OFF": {
+        "command": "Set_Sense_Power_Rf_Gain_State_OFF",
+        "verb": "set",
+        "description": "Set_Sense_Power_Rf_Gain_State \u2192 OFF. Input Port Power Gain",
+        "scpi": ":SENSe:POWer:RF:GAIN:STATe OFF",
+        "scpi_fast": ":SENS:POW:RF:GAIN:STAT OFF",
+        "subsystem": "SENS",
+        "group": "SENS",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Sense_Power_Rf_Gain_State_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Sense_Power_Rf_Gain_State_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Sense_Power_Rf_Gain_State_ON": {
+        "command": "Set_Sense_Power_Rf_Gain_State_ON",
+        "verb": "set",
+        "description": "Set_Sense_Power_Rf_Gain_State \u2192 ON. Input Port Power Gain",
+        "scpi": ":SENSe:POWer:RF:GAIN:STATe ON",
+        "scpi_fast": ":SENS:POW:RF:GAIN:STAT ON",
+        "subsystem": "SENS",
+        "group": "SENS",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Sense_Power_Rf_Gain_State_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Sense_Power_Rf_Gain_State_ON",
             "value": "<value>",
             "input_name": "value"
           }
@@ -4615,6 +5427,54 @@
         },
         "unverified": false
       },
+      "Set_Sweep_time_Auto_OFF": {
+        "command": "Set_Sweep_time_Auto_OFF",
+        "verb": "set",
+        "description": "Set_Sweep_time_Auto \u2192 OFF. Set Sweep time Auto",
+        "scpi": ":SENSe:SWEep:TIME:AUTO OFF",
+        "scpi_fast": ":SENS:SWE:TIME:AUTO OFF",
+        "subsystem": "Bandwidth",
+        "group": "RIG Bandwidth Commands",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Sweep_time_Auto_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Sweep_time_Auto_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Sweep_time_Auto_ON": {
+        "command": "Set_Sweep_time_Auto_ON",
+        "verb": "set",
+        "description": "Set_Sweep_time_Auto \u2192 ON. Set Sweep time Auto",
+        "scpi": ":SENSe:SWEep:TIME:AUTO ON",
+        "scpi_fast": ":SENS:SWE:TIME:AUTO ON",
+        "subsystem": "Bandwidth",
+        "group": "RIG Bandwidth Commands",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Sweep_time_Auto_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Sweep_time_Auto_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_System_Channel": {
         "command": "Set_System_Channel",
         "verb": "set",
@@ -4645,6 +5505,54 @@
         },
         "unverified": true
       },
+      "Set_System_Channel_OFF": {
+        "command": "Set_System_Channel_OFF",
+        "verb": "set",
+        "description": "Set_System_Channel \u2192 OFF. Low Frequency Channel",
+        "scpi": ":SYSTem:CHANnel OFF",
+        "scpi_fast": ":SYST:CHAN OFF",
+        "subsystem": "SYST",
+        "group": "SYST",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_System_Channel_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_System_Channel_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_System_Channel_ON": {
+        "command": "Set_System_Channel_ON",
+        "verb": "set",
+        "description": "Set_System_Channel \u2192 ON. Low Frequency Channel",
+        "scpi": ":SYSTem:CHANnel ON",
+        "scpi_fast": ":SYST:CHAN ON",
+        "subsystem": "SYST",
+        "group": "SYST",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_System_Channel_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_System_Channel_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_System_Configure_Port": {
         "command": "Set_System_Configure_Port",
         "verb": "set",
@@ -4669,6 +5577,54 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_System_Configure_Port",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_System_Configure_Port_REF": {
+        "command": "Set_System_Configure_Port_REF",
+        "verb": "set",
+        "description": "Set_System_Configure_Port \u2192 REF. Power on Type",
+        "scpi": ":SYSTem:CONFigure:PORT REF",
+        "scpi_fast": ":SYST:CONF:PORT REF",
+        "subsystem": "SYST",
+        "group": "SYST",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_System_Configure_Port_REF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_System_Configure_Port_REF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_System_Configure_Port_TRIG": {
+        "command": "Set_System_Configure_Port_TRIG",
+        "verb": "set",
+        "description": "Set_System_Configure_Port \u2192 TRIG. Power on Type",
+        "scpi": ":SYSTem:CONFigure:PORT TRIG",
+        "scpi_fast": ":SYST:CONF:PORT TRIG",
+        "subsystem": "SYST",
+        "group": "SYST",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_System_Configure_Port_TRIG",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_System_Configure_Port_TRIG",
             "value": "<value>",
             "input_name": "value"
           }
@@ -4784,6 +5740,54 @@
         },
         "unverified": true
       },
+      "Set_Tgenerator_Amplitude_State_OFF": {
+        "command": "Set_Tgenerator_Amplitude_State_OFF",
+        "verb": "set",
+        "description": "Set_Tgenerator_Amplitude_State \u2192 OFF. Amplitude On/Off",
+        "scpi": ":TGENerator:AMPLitude:STATe OFF",
+        "scpi_fast": ":TGEN:AMPL:STAT OFF",
+        "subsystem": "TGEN",
+        "group": "TGEN",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Tgenerator_Amplitude_State_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Tgenerator_Amplitude_State_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Tgenerator_Amplitude_State_ON": {
+        "command": "Set_Tgenerator_Amplitude_State_ON",
+        "verb": "set",
+        "description": "Set_Tgenerator_Amplitude_State \u2192 ON. Amplitude On/Off",
+        "scpi": ":TGENerator:AMPLitude:STATe ON",
+        "scpi_fast": ":TGEN:AMPL:STAT ON",
+        "subsystem": "TGEN",
+        "group": "TGEN",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Tgenerator_Amplitude_State_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Tgenerator_Amplitude_State_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Tgenerator_Amplitude_Step": {
         "command": "Set_Tgenerator_Amplitude_Step",
         "verb": "set",
@@ -4892,6 +5896,54 @@
         },
         "unverified": true
       },
+      "Set_Tgenerator_Normalize_State_OFF": {
+        "command": "Set_Tgenerator_Normalize_State_OFF",
+        "verb": "set",
+        "description": "Set_Tgenerator_Normalize_State \u2192 OFF. Normalization",
+        "scpi": ":TGENerator:NORMalize:STATe OFF",
+        "scpi_fast": ":TGEN:NORM:STAT OFF",
+        "subsystem": "TGEN",
+        "group": "TGEN",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Tgenerator_Normalize_State_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Tgenerator_Normalize_State_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Tgenerator_Normalize_State_ON": {
+        "command": "Set_Tgenerator_Normalize_State_ON",
+        "verb": "set",
+        "description": "Set_Tgenerator_Normalize_State \u2192 ON. Normalization",
+        "scpi": ":TGENerator:NORMalize:STATe ON",
+        "scpi_fast": ":TGEN:NORM:STAT ON",
+        "subsystem": "TGEN",
+        "group": "TGEN",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Tgenerator_Normalize_State_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Tgenerator_Normalize_State_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Tgenerator_Normalize_Trace": {
         "command": "Set_Tgenerator_Normalize_Trace",
         "verb": "set",
@@ -4942,6 +5994,54 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Trace_Format",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trace_Format_ASC": {
+        "command": "Set_Trace_Format_ASC",
+        "verb": "set",
+        "description": "Set_Trace_Format \u2192 ASC. Trace format",
+        "scpi": ":TRACe:FORMat ASC",
+        "scpi_fast": ":TRAC:FORM ASC",
+        "subsystem": "TRAC",
+        "group": "TRAC",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Trace_Format_ASC",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trace_Format_ASC",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trace_Format_REAL": {
+        "command": "Set_Trace_Format_REAL",
+        "verb": "set",
+        "description": "Set_Trace_Format \u2192 REAL. Trace format",
+        "scpi": ":TRACe:FORMat REAL",
+        "scpi_fast": ":TRAC:FORM REAL",
+        "subsystem": "TRAC",
+        "group": "TRAC",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Trace_Format_REAL",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trace_Format_REAL",
             "value": "<value>",
             "input_name": "value"
           }
@@ -5038,6 +6138,54 @@
         },
         "unverified": true
       },
+      "Set_Trigger_Sequence_External_Slope_NEG": {
+        "command": "Set_Trigger_Sequence_External_Slope_NEG",
+        "verb": "set",
+        "description": "Set_Trigger_Sequence_External_Slope \u2192 NEG. External Trigger Slope",
+        "scpi": ":TRIGger:SEQuence:EXTernal1:SLOPe NEG",
+        "scpi_fast": ":TRIG:SEQ:EXT1:SLOP NEG",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Trigger_Sequence_External_Slope_NEG",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Sequence_External_Slope_NEG",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Sequence_External_Slope_POS": {
+        "command": "Set_Trigger_Sequence_External_Slope_POS",
+        "verb": "set",
+        "description": "Set_Trigger_Sequence_External_Slope \u2192 POS. External Trigger Slope",
+        "scpi": ":TRIGger:SEQuence:EXTernal1:SLOPe POS",
+        "scpi_fast": ":TRIG:SEQ:EXT1:SLOP POS",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Trigger_Sequence_External_Slope_POS",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Sequence_External_Slope_POS",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Trigger_Sequence_Source": {
         "command": "Set_Trigger_Sequence_Source",
         "verb": "set",
@@ -5063,6 +6211,78 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Trigger_Sequence_Source",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Sequence_Source_EXT": {
+        "command": "Set_Trigger_Sequence_Source_EXT",
+        "verb": "set",
+        "description": "Set_Trigger_Sequence_Source \u2192 EXT. Initiate a Single Sweep",
+        "scpi": ":TRIGger:SEQuence:SOURce EXT",
+        "scpi_fast": ":TRIG:SEQ:SOUR EXT",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Trigger_Sequence_Source_EXT",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Sequence_Source_EXT",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Sequence_Source_IMM": {
+        "command": "Set_Trigger_Sequence_Source_IMM",
+        "verb": "set",
+        "description": "Set_Trigger_Sequence_Source \u2192 IMM. Initiate a Single Sweep",
+        "scpi": ":TRIGger:SEQuence:SOURce IMM",
+        "scpi_fast": ":TRIG:SEQ:SOUR IMM",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Trigger_Sequence_Source_IMM",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Sequence_Source_IMM",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Sequence_Source_VID": {
+        "command": "Set_Trigger_Sequence_Source_VID",
+        "verb": "set",
+        "description": "Set_Trigger_Sequence_Source \u2192 VID. Initiate a Single Sweep",
+        "scpi": ":TRIGger:SEQuence:SOURce VID",
+        "scpi_fast": ":TRIG:SEQ:SOUR VID",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Trigger_Sequence_Source_VID",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Sequence_Source_VID",
             "value": "<value>",
             "input_name": "value"
           }
@@ -5129,6 +6349,167 @@
         },
         "unverified": true
       },
+      "Set_Unit_Power_A": {
+        "command": "Set_Unit_Power_A",
+        "verb": "set",
+        "description": "Set_Unit_Power \u2192 A. Using C with Marker Peak Search and Peak Excursion",
+        "scpi": "UNIT:POW A",
+        "subsystem": "UNIT",
+        "group": "UNIT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Unit_Power_A",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Unit_Power_A",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Unit_Power_DBM": {
+        "command": "Set_Unit_Power_DBM",
+        "verb": "set",
+        "description": "Set_Unit_Power \u2192 DBM. Using C with Marker Peak Search and Peak Excursion",
+        "scpi": "UNIT:POW DBM",
+        "subsystem": "UNIT",
+        "group": "UNIT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Unit_Power_DBM",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Unit_Power_DBM",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Unit_Power_DBMV": {
+        "command": "Set_Unit_Power_DBMV",
+        "verb": "set",
+        "description": "Set_Unit_Power \u2192 DBMV. Using C with Marker Peak Search and Peak Excursion",
+        "scpi": "UNIT:POW DBMV",
+        "subsystem": "UNIT",
+        "group": "UNIT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Unit_Power_DBMV",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Unit_Power_DBMV",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Unit_Power_DBUA": {
+        "command": "Set_Unit_Power_DBUA",
+        "verb": "set",
+        "description": "Set_Unit_Power \u2192 DBUA. Using C with Marker Peak Search and Peak Excursion",
+        "scpi": "UNIT:POW DBUA",
+        "subsystem": "UNIT",
+        "group": "UNIT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Unit_Power_DBUA",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Unit_Power_DBUA",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Unit_Power_DBUV": {
+        "command": "Set_Unit_Power_DBUV",
+        "verb": "set",
+        "description": "Set_Unit_Power \u2192 DBUV. Using C with Marker Peak Search and Peak Excursion",
+        "scpi": "UNIT:POW DBUV",
+        "subsystem": "UNIT",
+        "group": "UNIT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Unit_Power_DBUV",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Unit_Power_DBUV",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Unit_Power_V": {
+        "command": "Set_Unit_Power_V",
+        "verb": "set",
+        "description": "Set_Unit_Power \u2192 V. Using C with Marker Peak Search and Peak Excursion",
+        "scpi": "UNIT:POW V",
+        "subsystem": "UNIT",
+        "group": "UNIT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Unit_Power_V",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Unit_Power_V",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Unit_Power_W": {
+        "command": "Set_Unit_Power_W",
+        "verb": "set",
+        "description": "Set_Unit_Power \u2192 W. Using C with Marker Peak Search and Peak Excursion",
+        "scpi": "UNIT:POW W",
+        "subsystem": "UNIT",
+        "group": "UNIT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Unit_Power_W",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Unit_Power_W",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Unit_Power_Emf": {
         "command": "Set_Unit_Power_Emf",
         "verb": "set",
@@ -5153,6 +6534,54 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Unit_Power_Emf",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Unit_Power_Emf_OFF": {
+        "command": "Set_Unit_Power_Emf_OFF",
+        "verb": "set",
+        "description": "Set_Unit_Power_Emf \u2192 OFF. EMF Mode",
+        "scpi": ":UNIT:POWer:EMF OFF",
+        "scpi_fast": ":UNIT:POW:EMF OFF",
+        "subsystem": "UNIT",
+        "group": "UNIT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Unit_Power_Emf_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Unit_Power_Emf_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Unit_Power_Emf_ON": {
+        "command": "Set_Unit_Power_Emf_ON",
+        "verb": "set",
+        "description": "Set_Unit_Power_Emf \u2192 ON. EMF Mode",
+        "scpi": ":UNIT:POWer:EMF ON",
+        "scpi_fast": ":UNIT:POW:EMF ON",
+        "subsystem": "UNIT",
+        "group": "UNIT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Unit_Power_Emf_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Unit_Power_Emf_ON",
             "value": "<value>",
             "input_name": "value"
           }

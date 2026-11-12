@@ -95,6 +95,22 @@
       "subsystem": "CALC",
       "unverified": true
     },
+    "Set_Calculate_Lline_State_OFF": {
+      "scpi": ":CALCulate:LLINe1:STATe OFF",
+      "scpiFast": ":CALC:LLIN1:STAT OFF",
+      "description": "Set_Calculate_Lline_State → OFF. Limit Line Testing",
+      "subsystem": "CALC",
+      "unverified": true,
+      "notes": "Individual of selector Set_Calculate_Lline_State = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Calculate_Lline_State_ON": {
+      "scpi": ":CALCulate:LLINe1:STATe ON",
+      "scpiFast": ":CALC:LLIN1:STAT ON",
+      "description": "Set_Calculate_Lline_State → ON. Limit Line Testing",
+      "subsystem": "CALC",
+      "unverified": true,
+      "notes": "Individual of selector Set_Calculate_Lline_State = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_Marker_State": {
       "scpi": ":CALCulate:MARKer<marker_number>:STATe <state_bool>",
       "scpiFast": ":CALC:MARK<marker_number>:STAT <state_bool>",
@@ -124,6 +140,22 @@
         "hz_value"
       ],
       "subsystem": "Markers"
+    },
+    "Set_Debug_Ftp_0": {
+      "scpi": ":DEBug:FTP 0",
+      "description": "Set_Debug_Ftp → 0. Turn the instrument's FTP server on or off.",
+      "subsystem": "Debug",
+      "group": "Debug Remote",
+      "unverified": true,
+      "notes": "Individual of selector Set_Debug_Ftp = 0 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Debug_Ftp_1": {
+      "scpi": ":DEBug:FTP 1",
+      "description": "Set_Debug_Ftp → 1. Turn the instrument's FTP server on or off.",
+      "subsystem": "Debug",
+      "group": "Debug Remote",
+      "unverified": true,
+      "notes": "Individual of selector Set_Debug_Ftp = 1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Debug_Ftp": {
       "scpi": ":DEBug:FTP <state>",
@@ -191,6 +223,22 @@
       "subsystem": "DEM",
       "unverified": true
     },
+    "Set_Demod_Am_State_OFF": {
+      "scpi": ":DEMod:AM:STATe OFF",
+      "scpiFast": ":DEM:AM:STAT OFF",
+      "description": "Set_Demod_Am_State → OFF. AM Demodulation",
+      "subsystem": "DEM",
+      "unverified": true,
+      "notes": "Individual of selector Set_Demod_Am_State = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Demod_Am_State_ON": {
+      "scpi": ":DEMod:AM:STATe ON",
+      "scpiFast": ":DEM:AM:STAT ON",
+      "description": "Set_Demod_Am_State → ON. AM Demodulation",
+      "subsystem": "DEM",
+      "unverified": true,
+      "notes": "Individual of selector Set_Demod_Am_State = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_Demod_Fm_State": {
       "scpi": ":DEMod:FM:STATe <value>",
       "scpiFast": ":DEM:FM:STAT <value>",
@@ -207,6 +255,22 @@
       ],
       "subsystem": "DEM",
       "unverified": true
+    },
+    "Set_Demod_Fm_State_OFF": {
+      "scpi": ":DEMod:FM:STATe OFF",
+      "scpiFast": ":DEM:FM:STAT OFF",
+      "description": "Set_Demod_Fm_State → OFF. FM Demodulation",
+      "subsystem": "DEM",
+      "unverified": true,
+      "notes": "Individual of selector Set_Demod_Fm_State = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Demod_Fm_State_ON": {
+      "scpi": ":DEMod:FM:STATe ON",
+      "scpiFast": ":DEM:FM:STAT ON",
+      "description": "Set_Demod_Fm_State → ON. FM Demodulation",
+      "subsystem": "DEM",
+      "unverified": true,
+      "notes": "Individual of selector Set_Demod_Fm_State = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Display_Mode_Brightness": {
       "scpi": ":DISPlay:MODE:BRIGhtness <value>",
@@ -295,6 +359,22 @@
       "subsystem": "FCO",
       "unverified": true
     },
+    "Set_Fcount_State_OFF": {
+      "scpi": "FCOunt:STATe OFF",
+      "scpiFast": "FCO:STAT OFF",
+      "description": "Set_Fcount_State → OFF. Frequency Counter Marker",
+      "subsystem": "FCO",
+      "unverified": true,
+      "notes": "Individual of selector Set_Fcount_State = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Fcount_State_ON": {
+      "scpi": "FCOunt:STATe ON",
+      "scpiFast": "FCO:STAT ON",
+      "description": "Set_Fcount_State → ON. Frequency Counter Marker",
+      "subsystem": "FCO",
+      "unverified": true,
+      "notes": "Individual of selector Set_Fcount_State = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_Center_Freq_MHz": {
       "scpi": ":FREQuency:CENTer <hz_value>",
       "scpiFast": ":FREQ:CENT <hz_value>",
@@ -364,6 +444,24 @@
       ],
       "subsystem": "Trace"
     },
+    "Set_Continuous_Mode_OFF": {
+      "scpi": ":INITiate:CONTinuous OFF",
+      "scpiFast": ":INIT:CONT OFF",
+      "description": "Set_Continuous_Mode → OFF. Set Continuous Mode",
+      "subsystem": "Trace",
+      "group": "Trace Command Sets",
+      "unverified": true,
+      "notes": "Individual of selector Set_Continuous_Mode = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Continuous_Mode_ON": {
+      "scpi": ":INITiate:CONTinuous ON",
+      "scpiFast": ":INIT:CONT ON",
+      "description": "Set_Continuous_Mode → ON. Set Continuous Mode",
+      "subsystem": "Trace",
+      "group": "Trace Command Sets",
+      "unverified": true,
+      "notes": "Individual of selector Set_Continuous_Mode = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_Instrument_Measure": {
       "scpi": ":INSTrument:MEASure <value>",
       "scpiFast": ":INST:MEAS <value>",
@@ -383,6 +481,38 @@
       "subsystem": "INST",
       "unverified": true
     },
+    "Set_Instrument_Measure_ACPR": {
+      "scpi": ":INSTrument:MEASure ACPR",
+      "scpiFast": ":INST:MEAS ACPR",
+      "description": "Set_Instrument_Measure → ACPR. Power Measurement",
+      "subsystem": "INST",
+      "unverified": true,
+      "notes": "Individual of selector Set_Instrument_Measure = ACPR — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Instrument_Measure_CHP": {
+      "scpi": ":INSTrument:MEASure CHP",
+      "scpiFast": ":INST:MEAS CHP",
+      "description": "Set_Instrument_Measure → CHP. Power Measurement",
+      "subsystem": "INST",
+      "unverified": true,
+      "notes": "Individual of selector Set_Instrument_Measure = CHP — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Instrument_Measure_OBW": {
+      "scpi": ":INSTrument:MEASure OBW",
+      "scpiFast": ":INST:MEAS OBW",
+      "description": "Set_Instrument_Measure → OBW. Power Measurement",
+      "subsystem": "INST",
+      "unverified": true,
+      "notes": "Individual of selector Set_Instrument_Measure = OBW — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Instrument_Measure_SEM": {
+      "scpi": ":INSTrument:MEASure SEM",
+      "scpiFast": ":INST:MEAS SEM",
+      "description": "Set_Instrument_Measure → SEM. Power Measurement",
+      "subsystem": "INST",
+      "unverified": true,
+      "notes": "Individual of selector Set_Instrument_Measure = SEM — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_Instrument_Select": {
       "scpi": ":INSTrument:SELect <value>",
       "scpiFast": ":INST:SEL <value>",
@@ -401,6 +531,38 @@
       ],
       "subsystem": "INST",
       "unverified": true
+    },
+    "Set_Instrument_Select_DAN": {
+      "scpi": ":INSTrument:SELect DAN",
+      "scpiFast": ":INST:SEL DAN",
+      "description": "Set_Instrument_Select → DAN. Instrument Mode",
+      "subsystem": "INST",
+      "unverified": true,
+      "notes": "Individual of selector Set_Instrument_Select = DAN — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Instrument_Select_POW": {
+      "scpi": ":INSTrument:SELect POW",
+      "scpiFast": ":INST:SEL POW",
+      "description": "Set_Instrument_Select → POW. Instrument Mode",
+      "subsystem": "INST",
+      "unverified": true,
+      "notes": "Individual of selector Set_Instrument_Select = POW — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Instrument_Select_SA": {
+      "scpi": ":INSTrument:SELect SA",
+      "scpiFast": ":INST:SEL SA",
+      "description": "Set_Instrument_Select → SA. Instrument Mode",
+      "subsystem": "INST",
+      "unverified": true,
+      "notes": "Individual of selector Set_Instrument_Select = SA — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Instrument_Select_TGEN": {
+      "scpi": ":INSTrument:SELect TGEN",
+      "scpiFast": ":INST:SEL TGEN",
+      "description": "Set_Instrument_Select → TGEN. Instrument Mode",
+      "subsystem": "INST",
+      "unverified": true,
+      "notes": "Individual of selector Set_Instrument_Select = TGEN — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Acpr_Adjacent": {
       "scpi": ":MEASure:ACPR:ADJacent <value>",
@@ -510,6 +672,22 @@
       "subsystem": "MEAS",
       "unverified": true
     },
+    "Set_Measure_Obw_Method_PERC": {
+      "scpi": ":MEASure:OBW:METHod PERC",
+      "scpiFast": ":MEAS:OBW:METH PERC",
+      "description": "Set_Measure_Obw_Method → PERC. Select the measurement method of OBW",
+      "subsystem": "MEAS",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Obw_Method = PERC — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Obw_Method_XDB": {
+      "scpi": ":MEASure:OBW:METHod XDB",
+      "scpiFast": ":MEAS:OBW:METH XDB",
+      "description": "Set_Measure_Obw_Method → XDB. Select the measurement method of OBW",
+      "subsystem": "MEAS",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Obw_Method = XDB — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_Measure_Obw_Percent": {
       "scpi": ":MEASure:OBW:PERCent <value>",
       "scpiFast": ":MEAS:OBW:PERC <value>",
@@ -566,6 +744,22 @@
       ],
       "subsystem": "MEAS",
       "unverified": true
+    },
+    "Set_Measure_Semask_Average_State_OFF": {
+      "scpi": ":MEASure:SEMask:AVERage:STATe OFF",
+      "scpiFast": ":MEAS:SEM:AVER:STAT OFF",
+      "description": "Set_Measure_Semask_Average_State → OFF. Set the Average",
+      "subsystem": "MEAS",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Semask_Average_State = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Semask_Average_State_ON": {
+      "scpi": ":MEASure:SEMask:AVERage:STATe ON",
+      "scpiFast": ":MEAS:SEM:AVER:STAT ON",
+      "description": "Set_Measure_Semask_Average_State → ON. Set the Average",
+      "subsystem": "MEAS",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Semask_Average_State = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Semask_Carrier_Power": {
       "scpi": ":MEASure:SEMask:CARRier:POWer <value>",
@@ -662,6 +856,22 @@
       "subsystem": "MEAS",
       "unverified": true
     },
+    "Set_Measure_Semask_Offset_List_State_OFF": {
+      "scpi": ":MEASure:SEMask:OFFSet:LIST:STATe OFF",
+      "scpiFast": ":MEAS:SEM:OFFS:LIST:STAT OFF",
+      "description": "Set_Measure_Semask_Offset_List_State → OFF. Set the Start Freq",
+      "subsystem": "MEAS",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Semask_Offset_List_State = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Semask_Offset_List_State_ON": {
+      "scpi": ":MEASure:SEMask:OFFSet:LIST:STATe ON",
+      "scpiFast": ":MEAS:SEM:OFFS:LIST:STAT ON",
+      "description": "Set_Measure_Semask_Offset_List_State → ON. Set the Start Freq",
+      "subsystem": "MEAS",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Semask_Offset_List_State = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_Measure_Semask_Offset_List_Sweep": {
       "scpi": ":MEASure:SEMask:OFFSet:LIST:SWEeptime <value>",
       "scpiFast": ":MEAS:SEM:OFFS:LIST:SWE <value>",
@@ -736,6 +946,20 @@
       ],
       "subsystem": "SENS",
       "unverified": true
+    },
+    "Set_Sense_Frequency_Center_DOWN": {
+      "scpi": "SENS:FREQ:CENT DOWN",
+      "description": "Set_Sense_Frequency_Center → DOWN. Using C with Marker Peak Search and Peak Excursion",
+      "subsystem": "SENS",
+      "unverified": true,
+      "notes": "Individual of selector Set_Sense_Frequency_Center = DOWN — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Sense_Frequency_Center_UP": {
+      "scpi": "SENS:FREQ:CENT UP",
+      "description": "Set_Sense_Frequency_Center → UP. Using C with Marker Peak Search and Peak Excursion",
+      "subsystem": "SENS",
+      "unverified": true,
+      "notes": "Individual of selector Set_Sense_Frequency_Center = UP — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Sense_Frequency_Span": {
       "scpi": "SENS:FREQ:SPAN <value>",
@@ -837,6 +1061,24 @@
       ],
       "subsystem": "Bandwidth"
     },
+    "Set_RBW_Auto_OFF": {
+      "scpi": ":SENSe:BANDwidth:RESolution:AUTO OFF",
+      "scpiFast": ":SENS:BAND:RES:AUTO OFF",
+      "description": "Set_RBW_Auto → OFF. Set RBW Auto",
+      "subsystem": "Bandwidth",
+      "group": "RIG Bandwidth Commands",
+      "unverified": true,
+      "notes": "Individual of selector Set_RBW_Auto = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_RBW_Auto_ON": {
+      "scpi": ":SENSe:BANDwidth:RESolution:AUTO ON",
+      "scpiFast": ":SENS:BAND:RES:AUTO ON",
+      "description": "Set_RBW_Auto → ON. Set RBW Auto",
+      "subsystem": "Bandwidth",
+      "group": "RIG Bandwidth Commands",
+      "unverified": true,
+      "notes": "Individual of selector Set_RBW_Auto = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_VBW": {
       "scpi": ":SENSe:BANDwidth:VIDeo <hz_value>",
       "scpiFast": ":SENS:BAND:VID <hz_value>",
@@ -867,6 +1109,24 @@
         "state_bool"
       ],
       "subsystem": "Bandwidth"
+    },
+    "Set_VBW_Auto_OFF": {
+      "scpi": ":SENSe:BANDwidth:VIDeo:AUTO OFF",
+      "scpiFast": ":SENS:BAND:VID:AUTO OFF",
+      "description": "Set_VBW_Auto → OFF. Set VBW Auto",
+      "subsystem": "Bandwidth",
+      "group": "RIG Bandwidth Commands",
+      "unverified": true,
+      "notes": "Individual of selector Set_VBW_Auto = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_VBW_Auto_ON": {
+      "scpi": ":SENSe:BANDwidth:VIDeo:AUTO ON",
+      "scpiFast": ":SENS:BAND:VID:AUTO ON",
+      "description": "Set_VBW_Auto → ON. Set VBW Auto",
+      "subsystem": "Bandwidth",
+      "group": "RIG Bandwidth Commands",
+      "unverified": true,
+      "notes": "Individual of selector Set_VBW_Auto = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Sense_Frequency_Center_Step_Increment": {
       "scpi": ":SENSe:FREQuency:CENTer:STEP:INCRement <value>",
@@ -912,6 +1172,22 @@
       "subsystem": "SENS",
       "unverified": true
     },
+    "Set_Sense_Power_Rf_Gain_State_OFF": {
+      "scpi": ":SENSe:POWer:RF:GAIN:STATe OFF",
+      "scpiFast": ":SENS:POW:RF:GAIN:STAT OFF",
+      "description": "Set_Sense_Power_Rf_Gain_State → OFF. Input Port Power Gain",
+      "subsystem": "SENS",
+      "unverified": true,
+      "notes": "Individual of selector Set_Sense_Power_Rf_Gain_State = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Sense_Power_Rf_Gain_State_ON": {
+      "scpi": ":SENSe:POWer:RF:GAIN:STATe ON",
+      "scpiFast": ":SENS:POW:RF:GAIN:STAT ON",
+      "description": "Set_Sense_Power_Rf_Gain_State → ON. Input Port Power Gain",
+      "subsystem": "SENS",
+      "unverified": true,
+      "notes": "Individual of selector Set_Sense_Power_Rf_Gain_State = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_Sense_Sweep_Tdmode": {
       "scpi": ":SENSe:SWEep:TDMode <value>",
       "scpiFast": ":SENS:SWE:TDM <value>",
@@ -956,6 +1232,24 @@
       ],
       "subsystem": "Bandwidth"
     },
+    "Set_Sweep_time_Auto_OFF": {
+      "scpi": ":SENSe:SWEep:TIME:AUTO OFF",
+      "scpiFast": ":SENS:SWE:TIME:AUTO OFF",
+      "description": "Set_Sweep_time_Auto → OFF. Set Sweep time Auto",
+      "subsystem": "Bandwidth",
+      "group": "RIG Bandwidth Commands",
+      "unverified": true,
+      "notes": "Individual of selector Set_Sweep_time_Auto = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Sweep_time_Auto_ON": {
+      "scpi": ":SENSe:SWEep:TIME:AUTO ON",
+      "scpiFast": ":SENS:SWE:TIME:AUTO ON",
+      "description": "Set_Sweep_time_Auto → ON. Set Sweep time Auto",
+      "subsystem": "Bandwidth",
+      "group": "RIG Bandwidth Commands",
+      "unverified": true,
+      "notes": "Individual of selector Set_Sweep_time_Auto = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_System_Channel": {
       "scpi": ":SYSTem:CHANnel <value>",
       "scpiFast": ":SYST:CHAN <value>",
@@ -973,6 +1267,22 @@
       "subsystem": "SYST",
       "unverified": true
     },
+    "Set_System_Channel_OFF": {
+      "scpi": ":SYSTem:CHANnel OFF",
+      "scpiFast": ":SYST:CHAN OFF",
+      "description": "Set_System_Channel → OFF. Low Frequency Channel",
+      "subsystem": "SYST",
+      "unverified": true,
+      "notes": "Individual of selector Set_System_Channel = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_System_Channel_ON": {
+      "scpi": ":SYSTem:CHANnel ON",
+      "scpiFast": ":SYST:CHAN ON",
+      "description": "Set_System_Channel → ON. Low Frequency Channel",
+      "subsystem": "SYST",
+      "unverified": true,
+      "notes": "Individual of selector Set_System_Channel = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_System_Configure_Port": {
       "scpi": ":SYSTem:CONFigure:PORT <value>",
       "scpiFast": ":SYST:CONF:PORT <value>",
@@ -989,6 +1299,22 @@
       ],
       "subsystem": "SYST",
       "unverified": true
+    },
+    "Set_System_Configure_Port_REF": {
+      "scpi": ":SYSTem:CONFigure:PORT REF",
+      "scpiFast": ":SYST:CONF:PORT REF",
+      "description": "Set_System_Configure_Port → REF. Power on Type",
+      "subsystem": "SYST",
+      "unverified": true,
+      "notes": "Individual of selector Set_System_Configure_Port = REF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_System_Configure_Port_TRIG": {
+      "scpi": ":SYSTem:CONFigure:PORT TRIG",
+      "scpiFast": ":SYST:CONF:PORT TRIG",
+      "description": "Set_System_Configure_Port → TRIG. Power on Type",
+      "subsystem": "SYST",
+      "unverified": true,
+      "notes": "Individual of selector Set_System_Configure_Port = TRIG — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_System_Date": {
       "scpi": ":SYSTem:DATE <value>",
@@ -1047,6 +1373,22 @@
       "subsystem": "TGEN",
       "unverified": true
     },
+    "Set_Tgenerator_Amplitude_State_OFF": {
+      "scpi": ":TGENerator:AMPLitude:STATe OFF",
+      "scpiFast": ":TGEN:AMPL:STAT OFF",
+      "description": "Set_Tgenerator_Amplitude_State → OFF. Amplitude On/Off",
+      "subsystem": "TGEN",
+      "unverified": true,
+      "notes": "Individual of selector Set_Tgenerator_Amplitude_State = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Tgenerator_Amplitude_State_ON": {
+      "scpi": ":TGENerator:AMPLitude:STATe ON",
+      "scpiFast": ":TGEN:AMPL:STAT ON",
+      "description": "Set_Tgenerator_Amplitude_State → ON. Amplitude On/Off",
+      "subsystem": "TGEN",
+      "unverified": true,
+      "notes": "Individual of selector Set_Tgenerator_Amplitude_State = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_Tgenerator_Amplitude_Step": {
       "scpi": ":TGENerator:AMPLitude:STEP <value>",
       "scpiFast": ":TGEN:AMPL:STEP <value>",
@@ -1103,6 +1445,22 @@
       "subsystem": "TGEN",
       "unverified": true
     },
+    "Set_Tgenerator_Normalize_State_OFF": {
+      "scpi": ":TGENerator:NORMalize:STATe OFF",
+      "scpiFast": ":TGEN:NORM:STAT OFF",
+      "description": "Set_Tgenerator_Normalize_State → OFF. Normalization",
+      "subsystem": "TGEN",
+      "unverified": true,
+      "notes": "Individual of selector Set_Tgenerator_Normalize_State = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Tgenerator_Normalize_State_ON": {
+      "scpi": ":TGENerator:NORMalize:STATe ON",
+      "scpiFast": ":TGEN:NORM:STAT ON",
+      "description": "Set_Tgenerator_Normalize_State → ON. Normalization",
+      "subsystem": "TGEN",
+      "unverified": true,
+      "notes": "Individual of selector Set_Tgenerator_Normalize_State = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_Tgenerator_Normalize_Trace": {
       "scpi": ":TGENerator:NORMalize:TRACe <value>",
       "scpiFast": ":TGEN:NORM:TRAC <value>",
@@ -1132,6 +1490,22 @@
       ],
       "subsystem": "TRAC",
       "unverified": true
+    },
+    "Set_Trace_Format_ASC": {
+      "scpi": ":TRACe:FORMat ASC",
+      "scpiFast": ":TRAC:FORM ASC",
+      "description": "Set_Trace_Format → ASC. Trace format",
+      "subsystem": "TRAC",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trace_Format = ASC — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trace_Format_REAL": {
+      "scpi": ":TRACe:FORMat REAL",
+      "scpiFast": ":TRAC:FORM REAL",
+      "description": "Set_Trace_Format → REAL. Trace format",
+      "subsystem": "TRAC",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trace_Format = REAL — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Trace_Mode": {
       "scpi": ":TRACe<trace_number>:MODE <mode_string>",
@@ -1184,6 +1558,22 @@
       "subsystem": "TRIG",
       "unverified": true
     },
+    "Set_Trigger_Sequence_External_Slope_NEG": {
+      "scpi": ":TRIGger:SEQuence:EXTernal1:SLOPe NEG",
+      "scpiFast": ":TRIG:SEQ:EXT1:SLOP NEG",
+      "description": "Set_Trigger_Sequence_External_Slope → NEG. External Trigger Slope",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Sequence_External_Slope = NEG — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Sequence_External_Slope_POS": {
+      "scpi": ":TRIGger:SEQuence:EXTernal1:SLOPe POS",
+      "scpiFast": ":TRIG:SEQ:EXT1:SLOP POS",
+      "description": "Set_Trigger_Sequence_External_Slope → POS. External Trigger Slope",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Sequence_External_Slope = POS — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_Trigger_Sequence_Source": {
       "scpi": ":TRIGger:SEQuence:SOURce <value>",
       "scpiFast": ":TRIG:SEQ:SOUR <value>",
@@ -1201,6 +1591,30 @@
       ],
       "subsystem": "TRIG",
       "unverified": true
+    },
+    "Set_Trigger_Sequence_Source_EXT": {
+      "scpi": ":TRIGger:SEQuence:SOURce EXT",
+      "scpiFast": ":TRIG:SEQ:SOUR EXT",
+      "description": "Set_Trigger_Sequence_Source → EXT. Initiate a Single Sweep",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Sequence_Source = EXT — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Sequence_Source_IMM": {
+      "scpi": ":TRIGger:SEQuence:SOURce IMM",
+      "scpiFast": ":TRIG:SEQ:SOUR IMM",
+      "description": "Set_Trigger_Sequence_Source → IMM. Initiate a Single Sweep",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Sequence_Source = IMM — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Sequence_Source_VID": {
+      "scpi": ":TRIGger:SEQuence:SOURce VID",
+      "scpiFast": ":TRIG:SEQ:SOUR VID",
+      "description": "Set_Trigger_Sequence_Source → VID. Initiate a Single Sweep",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Sequence_Source = VID — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Trigger_Sequence_Video_Level": {
       "scpi": ":TRIGger:SEQuence:VIDeo:LEVel <value>",
@@ -1236,6 +1650,55 @@
       "subsystem": "UNIT",
       "unverified": true
     },
+    "Set_Unit_Power_A": {
+      "scpi": "UNIT:POW A",
+      "description": "Set_Unit_Power → A. Using C with Marker Peak Search and Peak Excursion",
+      "subsystem": "UNIT",
+      "unverified": true,
+      "notes": "Individual of selector Set_Unit_Power = A — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Unit_Power_DBM": {
+      "scpi": "UNIT:POW DBM",
+      "description": "Set_Unit_Power → DBM. Using C with Marker Peak Search and Peak Excursion",
+      "subsystem": "UNIT",
+      "unverified": true,
+      "notes": "Individual of selector Set_Unit_Power = DBM — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Unit_Power_DBMV": {
+      "scpi": "UNIT:POW DBMV",
+      "description": "Set_Unit_Power → DBMV. Using C with Marker Peak Search and Peak Excursion",
+      "subsystem": "UNIT",
+      "unverified": true,
+      "notes": "Individual of selector Set_Unit_Power = DBMV — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Unit_Power_DBUA": {
+      "scpi": "UNIT:POW DBUA",
+      "description": "Set_Unit_Power → DBUA. Using C with Marker Peak Search and Peak Excursion",
+      "subsystem": "UNIT",
+      "unverified": true,
+      "notes": "Individual of selector Set_Unit_Power = DBUA — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Unit_Power_DBUV": {
+      "scpi": "UNIT:POW DBUV",
+      "description": "Set_Unit_Power → DBUV. Using C with Marker Peak Search and Peak Excursion",
+      "subsystem": "UNIT",
+      "unverified": true,
+      "notes": "Individual of selector Set_Unit_Power = DBUV — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Unit_Power_V": {
+      "scpi": "UNIT:POW V",
+      "description": "Set_Unit_Power → V. Using C with Marker Peak Search and Peak Excursion",
+      "subsystem": "UNIT",
+      "unverified": true,
+      "notes": "Individual of selector Set_Unit_Power = V — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Unit_Power_W": {
+      "scpi": "UNIT:POW W",
+      "description": "Set_Unit_Power → W. Using C with Marker Peak Search and Peak Excursion",
+      "subsystem": "UNIT",
+      "unverified": true,
+      "notes": "Individual of selector Set_Unit_Power = W — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_Unit_Power_Emf": {
       "scpi": ":UNIT:POWer:EMF <value>",
       "scpiFast": ":UNIT:POW:EMF <value>",
@@ -1252,6 +1715,22 @@
       ],
       "subsystem": "UNIT",
       "unverified": true
+    },
+    "Set_Unit_Power_Emf_OFF": {
+      "scpi": ":UNIT:POWer:EMF OFF",
+      "scpiFast": ":UNIT:POW:EMF OFF",
+      "description": "Set_Unit_Power_Emf → OFF. EMF Mode",
+      "subsystem": "UNIT",
+      "unverified": true,
+      "notes": "Individual of selector Set_Unit_Power_Emf = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Unit_Power_Emf_ON": {
+      "scpi": ":UNIT:POWer:EMF ON",
+      "scpiFast": ":UNIT:POW:EMF ON",
+      "description": "Set_Unit_Power_Emf → ON. EMF Mode",
+      "subsystem": "UNIT",
+      "unverified": true,
+      "notes": "Individual of selector Set_Unit_Power_Emf = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     }
   },
   "do": {

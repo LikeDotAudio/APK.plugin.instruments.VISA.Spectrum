@@ -4,7 +4,7 @@
 
 Generated from the `.komand` table by `apkaudio-komand build-trees`. Edit the table, not this file.
 
-**256 commands** — SET 85 · RIG 3 · NAB 115 · DO 53 · 204 unverified (79%)
+**316 commands** — SET 145 · RIG 3 · NAB 115 · DO 53 · 264 unverified (83%)
 
 `SET` one argument · `RIG` several applied together · `NAB` a query · `DO` a parameterless action. **†** marks a command swept out of a manual and never sent to the instrument.
 
@@ -85,6 +85,8 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `MARKer<n>` — **DO** `Do_Calculate_Marker` · per-instance: `n` · †
   - **`LLINe1`**
     - `STATe` — **SET** `Set_Calculate_Lline_State` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Limit Line Testing
+    - `STATe` — **SET** `Set_Calculate_Lline_State_OFF` · `OFF` · †<br>Set_Calculate_Lline_State → OFF. Limit Line Testing
+    - `STATe` — **SET** `Set_Calculate_Lline_State_ON` · `ON` · †<br>Set_Calculate_Lline_State → ON. Limit Line Testing
     - `STATe?` — **NAB** `Get_Calculate_Lline_State` · → BOOL · †<br>Limit Line Testing
     - **`BUZZer`**
       - `STATe?` — **NAB** `Get_Calculate_Lline_Buzzer_State` · → BOOL · †<br>Turn on/off the Buzzer
@@ -98,6 +100,8 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `X` — **SET** `Set_Marker_X_position` · `<hz_value>` · args: `hz_value` · numeric · per-instance: `marker_number`<br>Set Marker Frequency
 - **`DEBug`**
   - `FTP` — **SET** `Set_Debug_Ftp` · `<state>` · args: `state` · bool: `0` | `1` · †<br>Turn the instrument's FTP server on or off.
+  - `FTP` — **SET** `Set_Debug_Ftp_0` · `0` · †<br>Set_Debug_Ftp → 0. Turn the instrument's FTP server on or off.
+  - `FTP` — **SET** `Set_Debug_Ftp_1` · `1` · †<br>Set_Debug_Ftp → 1. Turn the instrument's FTP server on or off.
   - `FTP?` — **NAB** `Get_Debug_Ftp` · → BOOL · †<br>Whether the instrument's FTP server is on.
   - `REMote` — **NAB** `Get_Debug_Remote_Dmarker` · `DMARker` · → HOYI · †<br>Fast delta markers, in one binary frame.
   - `REMote` — **NAB** `Get_Debug_Remote_File` · `FILe` · → HOYI · †<br>The instrument's file list, first part.
@@ -121,9 +125,13 @@ Several statements in one message, so they hang off no single branch. Every stat
 - **`DEMod`**
   - **`AM`**
     - `STATe` — **SET** `Set_Demod_Am_State` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>AM Demodulation
+    - `STATe` — **SET** `Set_Demod_Am_State_OFF` · `OFF` · †<br>Set_Demod_Am_State → OFF. AM Demodulation
+    - `STATe` — **SET** `Set_Demod_Am_State_ON` · `ON` · †<br>Set_Demod_Am_State → ON. AM Demodulation
     - `STATe?` — **NAB** `Get_Demod_Am_State` · → BOOL · †<br>AM Demodulation
   - **`FM`**
     - `STATe` — **SET** `Set_Demod_Fm_State` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>FM Demodulation
+    - `STATe` — **SET** `Set_Demod_Fm_State_OFF` · `OFF` · †<br>Set_Demod_Fm_State → OFF. FM Demodulation
+    - `STATe` — **SET** `Set_Demod_Fm_State_ON` · `ON` · †<br>Set_Demod_Fm_State → ON. FM Demodulation
     - `STATe?` — **NAB** `Get_Demod_Fm_State` · → BOOL · †<br>FM Demodulation
 - **`DISPlay`**
   - **`MODE`**
@@ -145,6 +153,8 @@ Several statements in one message, so they hang off no single branch. Every stat
             - `OFFSet?` — **NAB** `Get_Scale_Rlevel_Offset` · → NR3 V · †<br>Trace Y-Axis Reference Level
 - **`FCOunt`**
   - `STATe` — **SET** `Set_Fcount_State` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Frequency Counter Marker
+  - `STATe` — **SET** `Set_Fcount_State_OFF` · `OFF` · †<br>Set_Fcount_State → OFF. Frequency Counter Marker
+  - `STATe` — **SET** `Set_Fcount_State_ON` · `ON` · †<br>Set_Fcount_State → ON. Frequency Counter Marker
   - `STATe?` — **NAB** `Get_Fcount_State` · → BOOL · †<br>Frequency Counter Marker
 - **`FREQuency`**
   - `CENTer` — **SET** `Set_Center_Freq_MHz` · `<hz_value>` · args: `hz_value` · numeric
@@ -153,10 +163,20 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `STOP` — **SET** `Set_Stop_Freq_MHz` · `<hz_value>` · args: `hz_value` · numeric
 - **`INITiate`**
   - `CONTinuous` — **SET** `Set_Continuous_Mode` · `<state_bool>` · args: `state_bool` · bool: `OFF` | `ON`
+  - `CONTinuous` — **SET** `Set_Continuous_Mode_OFF` · `OFF` · †<br>Set_Continuous_Mode → OFF. Set Continuous Mode
+  - `CONTinuous` — **SET** `Set_Continuous_Mode_ON` · `ON` · †<br>Set_Continuous_Mode → ON. Set Continuous Mode
   - `IMMediate` — **DO** `Do_Initiate_Continuous`
 - **`INSTrument`**
   - `MEASure` — **SET** `Set_Instrument_Measure` · `<value>` · args: `value` · enum: `CHP` | `ACPR` | `OBW` | `SEM` · †<br>Power Measurement
+  - `MEASure` — **SET** `Set_Instrument_Measure_ACPR` · `ACPR` · †<br>Set_Instrument_Measure → ACPR. Power Measurement
+  - `MEASure` — **SET** `Set_Instrument_Measure_CHP` · `CHP` · †<br>Set_Instrument_Measure → CHP. Power Measurement
+  - `MEASure` — **SET** `Set_Instrument_Measure_OBW` · `OBW` · †<br>Set_Instrument_Measure → OBW. Power Measurement
+  - `MEASure` — **SET** `Set_Instrument_Measure_SEM` · `SEM` · †<br>Set_Instrument_Measure → SEM. Power Measurement
   - `SELect` — **SET** `Set_Instrument_Select` · `<value>` · args: `value` · enum: `SA` | `TGEN` | `DAN` | `POW` · †<br>Instrument Mode
+  - `SELect` — **SET** `Set_Instrument_Select_DAN` · `DAN` · †<br>Set_Instrument_Select → DAN. Instrument Mode
+  - `SELect` — **SET** `Set_Instrument_Select_POW` · `POW` · †<br>Set_Instrument_Select → POW. Instrument Mode
+  - `SELect` — **SET** `Set_Instrument_Select_SA` · `SA` · †<br>Set_Instrument_Select → SA. Instrument Mode
+  - `SELect` — **SET** `Set_Instrument_Select_TGEN` · `TGEN` · †<br>Set_Instrument_Select → TGEN. Instrument Mode
   - `MEASure?` — **NAB** `Get_Instrument_Measure` · → 1 value · †<br>Power Measurement
   - `SELect?` — **NAB** `Get_Instrument_Select` · → CRD · †<br>Instrument Mode
 - **`MEAS`**
@@ -198,6 +218,8 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `SPAN?` — **NAB** `Get_Measure_Chpower_Span` · → NR3 · †<br>Channel Span
   - **`OBW`**
     - `METHod` — **SET** `Set_Measure_Obw_Method` · `<value>` · args: `value` · enum: `PERC` | `XDB` · †<br>Select the measurement method of OBW
+    - `METHod` — **SET** `Set_Measure_Obw_Method_PERC` · `PERC` · †<br>Set_Measure_Obw_Method → PERC. Select the measurement method of OBW
+    - `METHod` — **SET** `Set_Measure_Obw_Method_XDB` · `XDB` · †<br>Set_Measure_Obw_Method → XDB. Select the measurement method of OBW
     - `PERCent` — **SET** `Set_Measure_Obw_Percent` · `<value>` · args: `value` · numeric (s) · †<br>Set percentage (%) method of OBW
     - `XDB` — **SET** `Set_Measure_Obw_Xdb` · `<value>` · args: `value` · numeric · †<br>Set dBc method of OBW
     - `METHod?` — **NAB** `Get_Measure_Obw_Method` · → 1 value · †<br>Select the measurement method of OBW
@@ -211,6 +233,8 @@ Several statements in one message, so they hang off no single branch. Every stat
     - **`AVERage`**
       - `COUNt` — **SET** `Set_Measure_Semask_Average_Count` · `<value>` · args: `value` · integer · †<br>Set the Average
       - `STATe` — **SET** `Set_Measure_Semask_Average_State` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Set the Average
+      - `STATe` — **SET** `Set_Measure_Semask_Average_State_OFF` · `OFF` · †<br>Set_Measure_Semask_Average_State → OFF. Set the Average
+      - `STATe` — **SET** `Set_Measure_Semask_Average_State_ON` · `ON` · †<br>Set_Measure_Semask_Average_State → ON. Set the Average
       - `COUNt?` — **NAB** `Get_Measure_Semask_Average_Count` · → NR1 · †<br>Set the Average
       - `STATe?` — **NAB** `Get_Measure_Semask_Average_State` · → BOOL · †<br>Set the Average
     - **`CARRier`**
@@ -224,6 +248,8 @@ Several statements in one message, so they hang off no single branch. Every stat
     - **`OFFSet`**
       - **`LIST`**
         - `STATe` — **SET** `Set_Measure_Semask_Offset_List_State` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Set the Start Freq
+        - `STATe` — **SET** `Set_Measure_Semask_Offset_List_State_OFF` · `OFF` · †<br>Set_Measure_Semask_Offset_List_State → OFF. Set the Start Freq
+        - `STATe` — **SET** `Set_Measure_Semask_Offset_List_State_ON` · `ON` · †<br>Set_Measure_Semask_Offset_List_State → ON. Set the Start Freq
         - `SWEeptime` — **SET** `Set_Measure_Semask_Offset_List_Sweep` · `<value>` · args: `value` · numeric (s) · †<br>Set the Sweep Time
         - `TEST` — **SET** `Set_Measure_Semask_Offset_List_Test` · `<value>` · args: `value` · †<br>Set the Fail Mask
         - `STATe?` — **NAB** `Get_Measure_Semask_Offset_List_State` · → BOOL · †<br>Set the Start Freq
@@ -258,6 +284,8 @@ Several statements in one message, so they hang off no single branch. Every stat
 - **`SENS`**
   - **`FREQ`**
     - `CENT` — **SET** `Set_Sense_Frequency_Center` · `<value>` · args: `value` · enum: `UP` | `DOWN` · †<br>Using C with Marker Peak Search and Peak Excursion
+    - `CENT` — **SET** `Set_Sense_Frequency_Center_DOWN` · `DOWN` · †<br>Set_Sense_Frequency_Center → DOWN. Using C with Marker Peak Search and Peak Excursion
+    - `CENT` — **SET** `Set_Sense_Frequency_Center_UP` · `UP` · †<br>Set_Sense_Frequency_Center → UP. Using C with Marker Peak Search and Peak Excursion
     - `SPAN` — **SET** `Set_Sense_Frequency_Span` · `<value>` · args: `value` · numeric (Hz) · †<br>Using C with Marker Peak Search and Peak Excursion
     - `STAR` — **SET** `Set_Sense_Frequency_Start` · `<value>` · args: `value` · numeric (Hz) · †<br>Start Frequency
     - `STOP` — **SET** `Set_Sense_Frequency_Stop` · `<value>` · args: `value` · numeric (Hz) · †<br>Stop Frequency
@@ -285,8 +313,12 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `VIDeo` — **SET** `Set_VBW` · `<hz_value>` · args: `hz_value` · numeric (Hz)
     - **`RESolution`**
       - `AUTO` — **SET** `Set_RBW_Auto` · `<state_bool>` · args: `state_bool` · bool: `OFF` | `ON`
+      - `AUTO` — **SET** `Set_RBW_Auto_OFF` · `OFF` · †<br>Set_RBW_Auto → OFF. Set RBW Auto
+      - `AUTO` — **SET** `Set_RBW_Auto_ON` · `ON` · †<br>Set_RBW_Auto → ON. Set RBW Auto
     - **`VIDeo`**
       - `AUTO` — **SET** `Set_VBW_Auto` · `<state_bool>` · args: `state_bool` · bool: `OFF` | `ON`
+      - `AUTO` — **SET** `Set_VBW_Auto_OFF` · `OFF` · †<br>Set_VBW_Auto → OFF. Set VBW Auto
+      - `AUTO` — **SET** `Set_VBW_Auto_ON` · `ON` · †<br>Set_VBW_Auto → ON. Set VBW Auto
   - **`DETector`**
     - `FUNCtion?` — **NAB** `Get_Sense_Detector_Function` · → CRD · †<br>Type of Detection
     - **`FUNCtion`**
@@ -310,6 +342,8 @@ Several statements in one message, so they hang off no single branch. Every stat
       - `ATTenuation?` — **NAB** `Get_Sense_Power_Rf_Attenuation` · → NR3 dB · †<br>Input Attenuation
       - **`GAIN`**
         - `STATe` — **SET** `Set_Sense_Power_Rf_Gain_State` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Input Port Power Gain
+        - `STATe` — **SET** `Set_Sense_Power_Rf_Gain_State_OFF` · `OFF` · †<br>Set_Sense_Power_Rf_Gain_State → OFF. Input Port Power Gain
+        - `STATe` — **SET** `Set_Sense_Power_Rf_Gain_State_ON` · `ON` · †<br>Set_Sense_Power_Rf_Gain_State → ON. Input Port Power Gain
         - `STATe?` — **NAB** `Get_Sense_Power_Rf_Gain_State` · → BOOL dB · †<br>Input Port Power Gain
   - **`SWEep`**
     - `TDMode` — **SET** `Set_Sense_Sweep_Tdmode` · `<value>` · args: `value` · †
@@ -317,8 +351,12 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `TDMode?` — **NAB** `Get_Sense_Sweep_Tdmode` · → 1 value · †
     - **`TIME`**
       - `AUTO` — **SET** `Set_Sweep_time_Auto` · `<state_bool>` · args: `state_bool` · bool: `OFF` | `ON`
+      - `AUTO` — **SET** `Set_Sweep_time_Auto_OFF` · `OFF` · †<br>Set_Sweep_time_Auto → OFF. Set Sweep time Auto
+      - `AUTO` — **SET** `Set_Sweep_time_Auto_ON` · `ON` · †<br>Set_Sweep_time_Auto → ON. Set Sweep time Auto
 - **`SYSTem`**
   - `CHANnel` — **SET** `Set_System_Channel` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Low Frequency Channel
+  - `CHANnel` — **SET** `Set_System_Channel_OFF` · `OFF` · †<br>Set_System_Channel → OFF. Low Frequency Channel
+  - `CHANnel` — **SET** `Set_System_Channel_ON` · `ON` · †<br>Set_System_Channel → ON. Low Frequency Channel
   - `DATE` — **SET** `Set_System_Date` · `<value>` · args: `value` · †<br>Set Date
   - `TIME` — **SET** `Set_System_Time` · `<value>` · args: `value` · numeric (s) · †<br>Set Time
   - `CHANnel?` — **NAB** `Get_System_Channel` · → CRD · †<br>Low Frequency Channel
@@ -328,6 +366,8 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `PRESet` — **DO** `Do_System_Preset` · †
   - **`CONFigure`**
     - `PORT` — **SET** `Set_System_Configure_Port` · `<value>` · args: `value` · enum: `REF` | `TRIG` · †<br>Power on Type
+    - `PORT` — **SET** `Set_System_Configure_Port_REF` · `REF` · †<br>Set_System_Configure_Port → REF. Power on Type
+    - `PORT` — **SET** `Set_System_Configure_Port_TRIG` · `TRIG` · †<br>Set_System_Configure_Port → TRIG. Power on Type
     - `PORT?` — **NAB** `Get_System_Configure_Port` · → 1 value · †<br>Power on Type
   - **`DISPlay`**
     - `UPDate` — **DO** `Update_Display`
@@ -342,6 +382,8 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `AMPLitude?` — **NAB** `Get_Tgenerator_Amplitude` · → 1 value · †<br>Output Amplitdue
   - **`AMPLitude`**
     - `STATe` — **SET** `Set_Tgenerator_Amplitude_State` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Amplitude On/Off
+    - `STATe` — **SET** `Set_Tgenerator_Amplitude_State_OFF` · `OFF` · †<br>Set_Tgenerator_Amplitude_State → OFF. Amplitude On/Off
+    - `STATe` — **SET** `Set_Tgenerator_Amplitude_State_ON` · `ON` · †<br>Set_Tgenerator_Amplitude_State → ON. Amplitude On/Off
     - `STEP` — **SET** `Set_Tgenerator_Amplitude_Step` · `<value>` · args: `value` · integer · †<br>Amplitude Step
     - `STATe?` — **NAB** `Get_Tgenerator_Amplitude_State` · → BOOL · †<br>Amplitude On/Off
     - `STEP?` — **NAB** `Get_Tgenerator_Amplitude_Step` · → NR1 · †<br>Amplitude Step
@@ -350,6 +392,8 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `LEVel` — **SET** `Set_Tgenerator_Normalize_Level` · `<value>` · args: `value` · numeric · †<br>Normalization Reference Level
     - `POSN` — **SET** `Set_Tgenerator_Normalize_Posn` · `<value>` · args: `value` · numeric · †<br>Normalization Reference Position
     - `STATe` — **SET** `Set_Tgenerator_Normalize_State` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Normalization
+    - `STATe` — **SET** `Set_Tgenerator_Normalize_State_OFF` · `OFF` · †<br>Set_Tgenerator_Normalize_State → OFF. Normalization
+    - `STATe` — **SET** `Set_Tgenerator_Normalize_State_ON` · `ON` · †<br>Set_Tgenerator_Normalize_State → ON. Normalization
     - `TRACe` — **SET** `Set_Tgenerator_Normalize_Trace` · `<value>` · args: `value` · block · †<br>Reference Trace
     - `LEVel?` — **NAB** `Get_Tgenerator_Normalize_Level` · → NR3 · †<br>Normalization Reference Level
     - `POSN?` — **NAB** `Get_Tgenerator_Normalize_Posn` · → NR3 · †<br>Normalization Reference Position
@@ -358,6 +402,8 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `REF` — **DO** `Do_Tgenerator_Normalize_Ref` · †<br>Storing as Reference
 - **`TRACe`**
   - `FORMat` — **SET** `Set_Trace_Format` · `<value>` · args: `value` · enum: `ASC` | `REAL` · †<br>Trace format
+  - `FORMat` — **SET** `Set_Trace_Format_ASC` · `ASC` · †<br>Set_Trace_Format → ASC. Trace format
+  - `FORMat` — **SET** `Set_Trace_Format_REAL` · `REAL` · †<br>Set_Trace_Format → REAL. Trace format
   - `FORMat?` — **NAB** `Get_Trace_Format` · → CRD · †<br>Trace format
 - **`TRACe<trace_number>`**
   - `MODE` — **SET** `Set_Trace_Mode` · `<mode_string>` · args: `mode_string` · enum: `WRIT` | `MAXH` | `MINH` | `VIEW` | `BLAN` · per-instance: `trace_number`
@@ -365,19 +411,33 @@ Several statements in one message, so they hang off no single branch. Every stat
   - **`SEQuence`**
     - `DELaytime` — **SET** `Set_Trigger_Sequence_Delaytime` · `<value>` · args: `value` · numeric (s) · †<br>Trigger Delay Time
     - `SOURce` — **SET** `Set_Trigger_Sequence_Source` · `<value>` · args: `value` · enum: `IMM` | `VID` | `EXT` · †<br>Initiate a Single Sweep
+    - `SOURce` — **SET** `Set_Trigger_Sequence_Source_EXT` · `EXT` · †<br>Set_Trigger_Sequence_Source → EXT. Initiate a Single Sweep
+    - `SOURce` — **SET** `Set_Trigger_Sequence_Source_IMM` · `IMM` · †<br>Set_Trigger_Sequence_Source → IMM. Initiate a Single Sweep
+    - `SOURce` — **SET** `Set_Trigger_Sequence_Source_VID` · `VID` · †<br>Set_Trigger_Sequence_Source → VID. Initiate a Single Sweep
     - `DELaytime?` — **NAB** `Get_Trigger_Sequence_Delaytime` · → NR3 s · †<br>Trigger Delay Time
     - `SOURce?` — **NAB** `Get_Trigger_Sequence_Source` · → CRD · †<br>Trigger Source
     - **`EXTernal1`**
       - `SLOPe` — **SET** `Set_Trigger_Sequence_External_Slope` · `<value>` · args: `value` · enum: `POS` | `NEG` · †<br>External Trigger Slope
+      - `SLOPe` — **SET** `Set_Trigger_Sequence_External_Slope_NEG` · `NEG` · †<br>Set_Trigger_Sequence_External_Slope → NEG. External Trigger Slope
+      - `SLOPe` — **SET** `Set_Trigger_Sequence_External_Slope_POS` · `POS` · †<br>Set_Trigger_Sequence_External_Slope → POS. External Trigger Slope
       - `SLOPe?` — **NAB** `Get_Trigger_Sequence_External_Slope` · → CRD · †<br>External Trigger Slope
     - **`VIDeo`**
       - `LEVel` — **SET** `Set_Trigger_Sequence_Video_Level` · `<value>` · args: `value` · numeric · †<br>Command Example
       - `LEVel?` — **NAB** `Get_Trigger_Sequence_Video_Level` · → NR3 · †<br>Video Trigger Level Amplitude
 - **`UNIT`**
   - `POW` — **SET** `Set_Unit_Power` · `<value>` · args: `value` · enum: `DBM` | `DBMV` | `DBUV` | `DBUA` | `V` | `W` | `A` · †<br>Using C with Marker Peak Search and Peak Excursion
+  - `POW` — **SET** `Set_Unit_Power_A` · `A` · †<br>Set_Unit_Power → A. Using C with Marker Peak Search and Peak Excursion
+  - `POW` — **SET** `Set_Unit_Power_DBM` · `DBM` · †<br>Set_Unit_Power → DBM. Using C with Marker Peak Search and Peak Excursion
+  - `POW` — **SET** `Set_Unit_Power_DBMV` · `DBMV` · †<br>Set_Unit_Power → DBMV. Using C with Marker Peak Search and Peak Excursion
+  - `POW` — **SET** `Set_Unit_Power_DBUA` · `DBUA` · †<br>Set_Unit_Power → DBUA. Using C with Marker Peak Search and Peak Excursion
+  - `POW` — **SET** `Set_Unit_Power_DBUV` · `DBUV` · †<br>Set_Unit_Power → DBUV. Using C with Marker Peak Search and Peak Excursion
+  - `POW` — **SET** `Set_Unit_Power_V` · `V` · †<br>Set_Unit_Power → V. Using C with Marker Peak Search and Peak Excursion
+  - `POW` — **SET** `Set_Unit_Power_W` · `W` · †<br>Set_Unit_Power → W. Using C with Marker Peak Search and Peak Excursion
   - `POWer?` — **NAB** `Get_Unit_Power` · → 1 value · †<br>Select Power Units of Measure
   - **`POWer`**
     - `EMF` — **SET** `Set_Unit_Power_Emf` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>EMF Mode
+    - `EMF` — **SET** `Set_Unit_Power_Emf_OFF` · `OFF` · †<br>Set_Unit_Power_Emf → OFF. EMF Mode
+    - `EMF` — **SET** `Set_Unit_Power_Emf_ON` · `ON` · †<br>Set_Unit_Power_Emf → ON. EMF Mode
     - `EMF?` — **NAB** `Get_Unit_Power_Emf` · → BOOL · †<br>EMF Mode
 
 ## Common commands (IEEE 488.2)
