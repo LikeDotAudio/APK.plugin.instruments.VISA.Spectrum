@@ -1,0 +1,42 @@
+{
+  "model": "N9340B",
+  "manual": "Agilent N9340B Handheld Spectrum Analyzer Programmer's Guide N9340-90010; [SENSe:] is the default node",
+  "roots": [
+    "CALCulate",
+    "DEMod",
+    "DISPlay",
+    "FORMat",
+    "INITiate",
+    "INSTrument",
+    "MEASure",
+    "MMEMory",
+    "SENSe",
+    "SYSTem",
+    "TGENerator",
+    "TRACe",
+    "TRIGger",
+    "UNIT",
+    "FREQuency",
+    "POWer",
+    "BWIDth",
+    "BANDwidth",
+    "AVERage",
+    "DETector",
+    "SWEep",
+    "CORRection",
+    "FCOunt",
+    "CONFigure",
+    "FETCh",
+    "READ",
+    "CALibration",
+    "DEBug"
+  ],
+  "optional": [
+    "SENSe"
+  ],
+  "unresolved": {},
+  "bench": {
+    "CALibration": "N9340-90010 gives it only in a programming example (`CAL:SOUR:STAT ON`, the marker peak-search example)",
+    "DEBug": "undocumented: read out of the vendor's N9340 PC Software (SOURCES.md, 2026-10-31) — never sent yet"
+  }
+}

@@ -235,6 +235,49 @@
       ],
       "subsystem": "Amplitude"
     },
+    "Set_Scale_Pdivision": {
+      "scpi": ":DISPlay:WINDow:TRACe:Y:SCALe:PDIVision <value>",
+      "scpiFast": ":DISP:WIND:TRAC:Y:SCAL:PDIV <value>",
+      "description": "Trace Y-Axis Scaling",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "SCAL",
+      "unverified": true,
+      "notes": "Was `:SCALe:PDIVision <value>`: the table generator cut the `:DISPlay:WINDow:TRACe:Y` parent off, so the unit heard a root `SCALe` it does not have (-113 \"Undefined header\"). Full path from N9340-90010, :DISPlay:WINDow:TRACe:Y[:SCALe] commands (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Scale_Rlevel_Offset": {
+      "scpi": ":DISPlay:WINDow:TRACe:Y:SCALe:RLEVel:OFFSet <value>",
+      "scpiFast": ":DISP:WIND:TRAC:Y:SCAL:RLEV:OFFS <value>",
+      "description": "Trace Y-Axis Reference Level",
+      "arg": {
+        "kind": "numeric",
+        "unit": "V"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "SCAL",
+      "unverified": true,
+      "notes": "Was `:SCALe:RLEVel:OFFSet <value>`: the table generator cut the `:DISPlay:WINDow:TRACe:Y` parent off, so the unit heard a root `SCALe` it does not have (-113 \"Undefined header\"). Full path from N9340-90010, :DISPlay:WINDow:TRACe:Y[:SCALe] commands (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Scale_Spacing": {
+      "scpi": ":DISPlay:WINDow:TRACe:Y:SCALe:SPACing <value>",
+      "scpiFast": ":DISP:WIND:TRAC:Y:SCAL:SPAC <value>",
+      "description": "Vertical Axis Scaling",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "SCAL",
+      "unverified": true,
+      "notes": "Was `:SCALe:SPACing <value>`: the table generator cut the `:DISPlay:WINDow:TRACe:Y` parent off, so the unit heard a root `SCALe` it does not have (-113 \"Undefined header\"). Full path from N9340-90010, :DISPlay:WINDow:TRACe:Y[:SCALe] commands (scpi_paths.py, 2026-11-11)."
+    },
     "Set_Fcount_State": {
       "scpi": "FCOunt:STATe <value>",
       "scpiFast": "FCO:STAT <value>",
@@ -677,46 +720,6 @@
         "db_value"
       ],
       "subsystem": "Amplitude"
-    },
-    "Set_Scale_Pdivision": {
-      "scpi": ":SCALe:PDIVision <value>",
-      "scpiFast": ":SCAL:PDIV <value>",
-      "description": "Trace Y-Axis Scaling",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "SCAL",
-      "unverified": true
-    },
-    "Set_Scale_Rlevel_Offset": {
-      "scpi": ":SCALe:RLEVel:OFFSet <value>",
-      "scpiFast": ":SCAL:RLEV:OFFS <value>",
-      "description": "Trace Y-Axis Reference Level",
-      "arg": {
-        "kind": "numeric",
-        "unit": "V"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "SCAL",
-      "unverified": true
-    },
-    "Set_Scale_Spacing": {
-      "scpi": ":SCALe:SPACing <value>",
-      "scpiFast": ":SCAL:SPAC <value>",
-      "description": "Vertical Axis Scaling",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "SCAL",
-      "unverified": true
     },
     "Set_Sense_Frequency_Center": {
       "scpi": "SENS:FREQ:CENT <value>",
@@ -2262,6 +2265,41 @@
       "group": "NAB Amplitude Monitoring",
       "subsystem": "Amplitude"
     },
+    "Get_Scale_Pdivision": {
+      "scpi": ":DISPlay:WINDow:TRACe:Y:SCALe:PDIVision?",
+      "scpiFast": ":DISP:WIND:TRAC:Y:SCAL:PDIV?",
+      "description": "Trace Y-Axis Scaling",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "SCAL",
+      "unverified": true,
+      "notes": "Was `:SCALe:PDIVision?`: the table generator cut the `:DISPlay:WINDow:TRACe:Y` parent off, so the unit heard a root `SCALe` it does not have (-113 \"Undefined header\"). Full path from N9340-90010, :DISPlay:WINDow:TRACe:Y[:SCALe] commands (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Scale_Rlevel_Offset": {
+      "scpi": ":DISPlay:WINDow:TRACe:Y:SCALe:RLEVel:OFFSet?",
+      "scpiFast": ":DISP:WIND:TRAC:Y:SCAL:RLEV:OFFS?",
+      "description": "Trace Y-Axis Reference Level",
+      "returns": {
+        "count": 1,
+        "type": "NR3",
+        "unit": "V"
+      },
+      "subsystem": "SCAL",
+      "unverified": true,
+      "notes": "Was `:SCALe:RLEVel:OFFSet?`: the table generator cut the `:DISPlay:WINDow:TRACe:Y` parent off, so the unit heard a root `SCALe` it does not have (-113 \"Undefined header\"). Full path from N9340-90010, :DISPlay:WINDow:TRACe:Y[:SCALe] commands (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Scale_Spacing": {
+      "scpi": ":DISPlay:WINDow:TRACe:Y:SCALe:SPACing?",
+      "scpiFast": ":DISP:WIND:TRAC:Y:SCAL:SPAC?",
+      "description": "Vertical Axis Scaling",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "SCAL",
+      "unverified": true,
+      "notes": "Was `:SCALe:SPACing?`: the table generator cut the `:DISPlay:WINDow:TRACe:Y` parent off, so the unit heard a root `SCALe` it does not have (-113 \"Undefined header\"). Full path from N9340-90010, :DISPlay:WINDow:TRACe:Y[:SCALe] commands (scpi_paths.py, 2026-11-11)."
+    },
     "Get_Fcount_State": {
       "scpi": "FCOunt:STATe?",
       "scpiFast": "FCO:STAT?",
@@ -2665,38 +2703,6 @@
       },
       "group": "Individual Read Queries",
       "subsystem": "Amplitude"
-    },
-    "Get_Scale_Pdivision": {
-      "scpi": ":SCALe:PDIVision?",
-      "scpiFast": ":SCAL:PDIV?",
-      "description": "Trace Y-Axis Scaling",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "SCAL",
-      "unverified": true
-    },
-    "Get_Scale_Rlevel_Offset": {
-      "scpi": ":SCALe:RLEVel:OFFSet?",
-      "scpiFast": ":SCAL:RLEV:OFFS?",
-      "description": "Trace Y-Axis Reference Level",
-      "returns": {
-        "count": 1,
-        "type": "NR3",
-        "unit": "V"
-      },
-      "subsystem": "SCAL",
-      "unverified": true
-    },
-    "Get_Scale_Spacing": {
-      "scpi": ":SCALe:SPACing?",
-      "scpiFast": ":SCAL:SPAC?",
-      "description": "Vertical Axis Scaling",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "SCAL",
-      "unverified": true
     },
     "Get_Averaging": {
       "scpi": ":SENSe:AVERage:TRACe<trace_number>:COUNt?",

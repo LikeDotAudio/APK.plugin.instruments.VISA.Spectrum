@@ -65,7 +65,7 @@ Several statements in one message, so they hang off no single branch. Every stat
   - **`SWEep`**
     - `TIME` — **SET** `Sweep_Time` · `<sweep_time_s>` · args: `sweep_time_s` · numeric (s)
 - **`SYSTem`**
-  - `ERRor?` — **NAB** `Get_error_information` · → NR2<br>System Error Check
+  - `ERRor?` — **NAB** `Get_error_information` · → ERROR<br>System Error Check
   - **`DISPlay`**
     - `UPDate` — **DO** `Do_Update_Display`
   - **`POWer`**

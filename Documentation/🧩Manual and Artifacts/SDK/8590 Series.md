@@ -20,40 +20,40 @@ From the BIM part [`keysight/8590-series`](/api/bim/parts?full=1&id=keysight/859
 
 | Terminal | Connector | Domain | Count | Signal |
 |---|---|---|---:|---|
-| INPUT 50Ω | Type N female | rf | 1 | RF input, 50 Ω |
-| INPUT 75Ω (Opt 001) | BNC female | rf | 1 | RF input, 75 Ω (Option 001, replaces INPUT 50Ω) |
-| EXT REF IN | BNC female | clock | 1 | 10 MHz external reference in, -2 to +10 dBm |
-| EXT TRIG INPUT | BNC female | signal | 1 | external trigger, positive edge TTL |
-| EXT ALC INPUT (Opt 010/011) | BNC | signal | 1 | tracking-generator external leveling, 1 MΩ, -66 to +6 dBV |
-| GATE TRIGGER INPUT (Opt 105/107) | BNC female | signal | 1 | gate trigger, TTL, min pulse >30 ns |
-| TV IN (Opt 107) | BNC female (75 Ω) | video | 1 | TV signal input, 75 Ω |
+| INPUT 50Ω | COAX-N-F | rf | 1 | RF input, 50 Ω |
+| INPUT 75Ω (Opt 001) | COAX-BNC-F | rf | 1 | RF input, 75 Ω (Option 001, replaces INPUT 50Ω) |
+| EXT REF IN | COAX-BNC-F | clock | 1 | 10 MHz external reference in, -2 to +10 dBm |
+| EXT TRIG INPUT | COAX-BNC-F | signal | 1 | external trigger, positive edge TTL |
+| EXT ALC INPUT (Opt 010/011) | COAX-BNC | signal | 1 | tracking-generator external leveling, 1 MΩ, -66 to +6 dBV |
+| GATE TRIGGER INPUT (Opt 105/107) | COAX-BNC-F | signal | 1 | gate trigger, TTL, min pulse >30 ns |
+| TV IN (Opt 107) | COAX-BNC-F | video | 1 | TV signal input, 75 Ω |
 
 ### Outputs
 
 | Terminal | Connector | Domain | Count | Signal |
 |---|---|---|---:|---|
 | CAL OUT |  | signal | 1 | 300 MHz calibrator, -20 dBm (29 dBmV with Opt 001/011) |
-| 10 MHz REF OUTPUT | BNC female | clock | 1 | 10 MHz reference out, >0 dBm, 50 Ω |
+| 10 MHz REF OUTPUT | COAX-BNC-F | clock | 1 | 10 MHz reference out, >0 dBm, 50 Ω |
 | AUX IF OUTPUT |  | signal | 1 | 21.4 MHz IF out, -10 to -60 dBm, 50 Ω |
-| AUX VIDEO OUTPUT | BNC female | signal | 1 | detected video 0 to 1 V (uncorrected) |
-| SWEEP OUTPUT | BNC female | signal | 1 | 0 to +10 V sweep ramp |
-| MONITOR OUTPUT | BNC female | video | 1 | external monitor video (internal-monitor / NTSC / PAL sync) |
-| EARPHONE (Opt 102/103) | 1/8 inch (3.5 mm) monaural jack | audio | 1 | demodulated audio to earphone |
-| GATE OUTPUT (Opt 105/107) | BNC female | signal | 1 | gate status, TTL high = on |
-| TV MON OUTPUT (Opt 107) | BNC female | video | 1 | baseband video from TV receiver |
-| TV TRIG OUT (Opt 101+102) | BNC female | signal | 1 | TV line trigger, TTL negative edge |
+| AUX VIDEO OUTPUT | COAX-BNC-F | signal | 1 | detected video 0 to 1 V (uncorrected) |
+| SWEEP OUTPUT | COAX-BNC-F | signal | 1 | 0 to +10 V sweep ramp |
+| MONITOR OUTPUT | COAX-BNC-F | video | 1 | external monitor video (internal-monitor / NTSC / PAL sync) |
+| EARPHONE (Opt 102/103) | TS-3.5-F | audio | 1 | demodulated audio to earphone |
+| GATE OUTPUT (Opt 105/107) | COAX-BNC-F | signal | 1 | gate status, TTL high = on |
+| TV MON OUTPUT (Opt 107) | COAX-BNC-F | video | 1 | baseband video from TV receiver |
+| TV TRIG OUT (Opt 101+102) | COAX-BNC-F | signal | 1 | TV line trigger, TTL negative edge |
 
 ### Connections (control and network)
 
 | Terminal | Connector | Domain | Count | Signal |
 |---|---|---|---:|---|
-| RF OUT 50Ω (Opt 010) | Type N female | rf | 1 | tracking generator output 100 kHz-1.8 GHz, 50 Ω (Option 010) |
-| RF OUT 75Ω (Opt 011) | BNC female (75 Ω) | rf | 1 | tracking generator output 1 MHz-1.8 GHz, 75 Ω (Option 011) |
-| HI-SWEEP IN/OUT | BNC female | signal | 1 | TTL high = sweep / low = retrace; open-collector input, low stops sweep |
-| AUX INTERFACE | DE-9 (9-pin subminiature D) | control | 1 | TTL control lines A-D/I plus +5/+15/-15 Vdc |
-| GPIB (Opt 041) | IEEE-488 | control | 1 | GPIB remote interface (Option 041) |
-| PARALLEL (Opt 041/043) | DB-25 female (25-pin subminiature D) | control | 1 | parallel printer port (Options 041 and 043) |
-| RS-232 (Opt 043) | DE-9 male | control | 1 | RS-232 serial (Option 043) |
+| RF OUT 50Ω (Opt 010) | COAX-N-F | rf | 1 | tracking generator output 100 kHz-1.8 GHz, 50 Ω (Option 010) |
+| RF OUT 75Ω (Opt 011) | COAX-BNC-F | rf | 1 | tracking generator output 1 MHz-1.8 GHz, 75 Ω (Option 011) |
+| HI-SWEEP IN/OUT | COAX-BNC-F | signal | 1 | TTL high = sweep / low = retrace; open-collector input, low stops sweep |
+| AUX INTERFACE | DSUB-9 | control | 1 | TTL control lines A-D/I plus +5/+15/-15 Vdc |
+| GPIB (Opt 041) | GPIB | control | 1 | GPIB remote interface (Option 041) |
+| PARALLEL (Opt 041/043) | DSUB-25-F | control | 1 | parallel printer port (Options 041 and 043) |
+| RS-232 (Opt 043) | DSUB-9-M | control | 1 | RS-232 serial (Option 043) |
 | EXT KEYBOARD (Opt 041/043) |  | control | 1 | external keyboard, IBM/AT compatible |
 
 **Power:** LINE
@@ -103,6 +103,9 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Get_Demod_Fm_State` | `:DEMod:FM:STATe?` | — | BOOL → `…/Reading/Get_Demod_Fm_State` | DEM | unverified |
 | `Get_Display_Mode_Brightness` | `:DISPlay:MODE:BRIGhtness?` | — | → `…/Reading/Get_Display_Mode_Brightness` | DISP | unverified |
 | `Reference_Level` | `:DISPlay:WINDow:TRACe:Y:RLEVel?` | — | NR3 → `…/Reading/Reference_Level` | Individual Read Queries |  |
+| `Get_Scale_Pdivision` | `:DISPlay:WINDow:TRACe:Y:SCALe:PDIVision?` | — | → `…/Reading/Get_Scale_Pdivision` | SCAL | unverified |
+| `Get_Scale_Rlevel_Offset` | `:DISPlay:WINDow:TRACe:Y:SCALe:RLEVel:OFFSet?` | — | NR3 → `…/Reading/Get_Scale_Rlevel_Offset` | SCAL | unverified |
+| `Get_Scale_Spacing` | `:DISPlay:WINDow:TRACe:Y:SCALe:SPACing?` | — | → `…/Reading/Get_Scale_Spacing` | SCAL | unverified |
 | `Get_Fcount_State` | `FCOunt:STATe?` | — | BOOL → `…/Reading/Get_Fcount_State` | FCO | unverified |
 | `Get_Instrument_Measure` | `:INSTrument:MEASure?` | — | → `…/Reading/Get_Instrument_Measure` | INST | unverified |
 | `Get_Instrument_Select` | `:INSTrument:SELect?` | — | CRD → `…/Reading/Get_Instrument_Select` | INST | unverified |
@@ -138,9 +141,6 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Get_Measure_Semask_Offset_List_Test` | `:MEASure:SEMask:OFFSetn:LIST:TEST?` | — | → `…/Reading/Get_Measure_Semask_Offset_List_Test` | MEAS | unverified |
 | `Get_Measure_Semask_Sweep` | `:MEASure:SEMask:SWEeptime?` | — | CRD → `…/Reading/Get_Measure_Semask_Sweep` | MEAS | unverified |
 | `Attenuation` | `:POWer:RF:ATTenuation?` | — | NR3 → `…/Reading/Attenuation` | Individual Read Queries |  |
-| `Get_Scale_Pdivision` | `:SCALe:PDIVision?` | — | → `…/Reading/Get_Scale_Pdivision` | SCAL | unverified |
-| `Get_Scale_Rlevel_Offset` | `:SCALe:RLEVel:OFFSet?` | — | NR3 → `…/Reading/Get_Scale_Rlevel_Offset` | SCAL | unverified |
-| `Get_Scale_Spacing` | `:SCALe:SPACing?` | — | → `…/Reading/Get_Scale_Spacing` | SCAL | unverified |
 | `Get_Averaging` | `:SENSe:AVERage:TRACe<trace_number>:COUNt?` | — | NR1 → `…/Reading/Get_Averaging` | Trace |  |
 | `Get_Averaging_State` | `:SENSe:AVERage:TRACe<trace_number>:STATe?` | — | BOOL → `…/Reading/Get_Averaging_State` | Trace |  |
 | `Get_Sense_Detector_Function` | `:SENSe:DETector:FUNCtion?` | — | CRD → `…/Reading/Get_Sense_Detector_Function` | SENS | unverified |
@@ -191,6 +191,9 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Set_Demod_Fm_State` | `:DEMod:FM:STATe <value>` | `value`: `OFF` · `ON` | — | DEM | unverified |
 | `Set_Display_Mode_Brightness` | `:DISPlay:MODE:BRIGhtness <value>` | `value`: unknown | — | DISP | unverified |
 | `Set_Reference_Level` | `:DISPlay:WINDow:TRACe:Y:RLEVel <dbm_value>` | `dbm_value`: numeric V | — | Individual Power Sets |  |
+| `Set_Scale_Pdivision` | `:DISPlay:WINDow:TRACe:Y:SCALe:PDIVision <value>` | `value`: unknown | — | SCAL | unverified |
+| `Set_Scale_Rlevel_Offset` | `:DISPlay:WINDow:TRACe:Y:SCALe:RLEVel:OFFSet <value>` | `value`: numeric V | — | SCAL | unverified |
+| `Set_Scale_Spacing` | `:DISPlay:WINDow:TRACe:Y:SCALe:SPACing <value>` | `value`: unknown | — | SCAL | unverified |
 | `Set_Fcount_State` | `FCOunt:STATe <value>` | `value`: `OFF` · `ON` | — | FCO | unverified |
 | `Set_Center_Freq_MHz` | `:FREQuency:CENTer <hz_value>` | `hz_value`: numeric | — | RIG Frequency commands |  |
 | `Set_Span_Frequency` | `:FREQuency:SPAN <hz_value>` | `hz_value`: numeric | — | RIG Frequency commands |  |
@@ -222,9 +225,6 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Set_Measure_Semask_Offset_List_Test` | `:MEASure:SEMask:OFFSet:LIST:TEST <value>` | `value`: unknown | — | MEAS | unverified |
 | `Set_Measure_Semask_Sweep` | `:MEASure:SEMask:SWEeptime <value>` | `value`: numeric 0.00837…4000 s | — | MEAS | unverified |
 | `Set_Power_Attenuation` | `:POWer:ATTenuation <db_value>` | `db_value`: numeric dB | — | Individual Power Sets |  |
-| `Set_Scale_Pdivision` | `:SCALe:PDIVision <value>` | `value`: unknown | — | SCAL | unverified |
-| `Set_Scale_Rlevel_Offset` | `:SCALe:RLEVel:OFFSet <value>` | `value`: numeric V | — | SCAL | unverified |
-| `Set_Scale_Spacing` | `:SCALe:SPACing <value>` | `value`: unknown | — | SCAL | unverified |
 | `Set_Sense_Frequency_Center` | `SENS:FREQ:CENT <value>` | `value`: `UP` · `DOWN` | — | SENS | unverified |
 | `Set_Sense_Frequency_Span` | `SENS:FREQ:SPAN <value>` | `value`: numeric Hz | — | SENS | unverified |
 | `Set_Sense_Frequency_Start` | `SENS:FREQ:STAR <value>` | `value`: numeric Hz | — | SENS | unverified |
@@ -286,6 +286,9 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Get_Display_Mode_Brightness` | `:DISPlay:MODE:BRIGhtness?` | — | → `…/Reading/Get_Display_Mode_Brightness` | DISP | unverified |
 | `Reference_Level` | `:DISPlay:WINDow:TRACe:Y:RLEVel?` | — | NR3 → `…/Reading/Reference_Level` | Individual Read Queries |  |
 | `amplitude_settings` | `:DISPlay:WINDow:TRACe:Y:RLEVel?;:POWer:ATTenuation?;:POWer:GAIN?` | — | ×3 → `…/Reading/amplitude_settings` | NAB Amplitude Monitoring |  |
+| `Get_Scale_Pdivision` | `:DISPlay:WINDow:TRACe:Y:SCALe:PDIVision?` | — | → `…/Reading/Get_Scale_Pdivision` | SCAL | unverified |
+| `Get_Scale_Rlevel_Offset` | `:DISPlay:WINDow:TRACe:Y:SCALe:RLEVel:OFFSet?` | — | NR3 → `…/Reading/Get_Scale_Rlevel_Offset` | SCAL | unverified |
+| `Get_Scale_Spacing` | `:DISPlay:WINDow:TRACe:Y:SCALe:SPACing?` | — | → `…/Reading/Get_Scale_Spacing` | SCAL | unverified |
 | `Get_Fcount_State` | `FCOunt:STATe?` | — | BOOL → `…/Reading/Get_Fcount_State` | FCO | unverified |
 | `Frequency_settings` | `:FREQuency:STARt?;:FREQuency:STOP?;:FREQuency:CENTer?;:FREQuency:SPAN?` | — | ×4 → `…/Reading/Frequency_settings` | NAB Frequency Monitoring |  |
 | `Get_Instrument_Measure` | `:INSTrument:MEASure?` | — | → `…/Reading/Get_Instrument_Measure` | INST | unverified |
@@ -322,9 +325,6 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Get_Measure_Semask_Offset_List_Test` | `:MEASure:SEMask:OFFSetn:LIST:TEST?` | — | → `…/Reading/Get_Measure_Semask_Offset_List_Test` | MEAS | unverified |
 | `Get_Measure_Semask_Sweep` | `:MEASure:SEMask:SWEeptime?` | — | CRD → `…/Reading/Get_Measure_Semask_Sweep` | MEAS | unverified |
 | `Attenuation` | `:POWer:RF:ATTenuation?` | — | NR3 → `…/Reading/Attenuation` | Individual Read Queries |  |
-| `Get_Scale_Pdivision` | `:SCALe:PDIVision?` | — | → `…/Reading/Get_Scale_Pdivision` | SCAL | unverified |
-| `Get_Scale_Rlevel_Offset` | `:SCALe:RLEVel:OFFSet?` | — | NR3 → `…/Reading/Get_Scale_Rlevel_Offset` | SCAL | unverified |
-| `Get_Scale_Spacing` | `:SCALe:SPACing?` | — | → `…/Reading/Get_Scale_Spacing` | SCAL | unverified |
 | `Get_Averaging` | `:SENSe:AVERage:TRACe<trace_number>:COUNt?` | — | NR1 → `…/Reading/Get_Averaging` | Trace |  |
 | `Get_Averaging_State` | `:SENSe:AVERage:TRACe<trace_number>:STATe?` | — | BOOL → `…/Reading/Get_Averaging_State` | Trace |  |
 | `bandwidth_settings` | `:SENSe:BANDwidth:RESolution?;:SENSe:BANDwidth:VIDeo?;:SENSe:BANDwidth:VIDeo:AUTO?;:INITiate:CONTinuous?;:SENSe:SWEep:TIME?` | — | ×5 → `…/Reading/bandwidth_settings` | NAB Bandwidth Monitoring |  |

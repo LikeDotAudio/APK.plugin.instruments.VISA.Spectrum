@@ -1,0 +1,20 @@
+{
+  "model": "HPE4411A",
+  "manual": "Agilent ESA-E Series Programmer's Guide E4401-90xxx; [SENSe:] is the default node",
+  "roots": [
+    "CALCulate",
+    "DISPlay",
+    "INITiate",
+    "SENSe",
+    "SYSTem",
+    "FREQuency",
+    "POWer",
+    "BANDwidth",
+    "BWIDth",
+    "SWEep"
+  ],
+  "optional": [
+    "SENSe"
+  ],
+  "unresolved": {}
+}

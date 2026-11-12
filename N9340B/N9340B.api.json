@@ -939,6 +939,86 @@
         },
         "unverified": false
       },
+      "Get_Scale_Pdivision": {
+        "command": "Get_Scale_Pdivision",
+        "verb": "get",
+        "description": "Trace Y-Axis Scaling",
+        "scpi": ":DISPlay:WINDow:TRACe:Y:SCALe:PDIVision?",
+        "scpi_fast": ":DISP:WIND:TRAC:Y:SCAL:PDIV?",
+        "subsystem": "SCAL",
+        "group": "SCAL",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": {
+          "count": 1
+        },
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Get_Scale_Pdivision",
+          "direction": "in",
+          "payload_format": {
+            "command": "Get_Scale_Pdivision"
+          },
+          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/Get_Scale_Pdivision",
+          "reading_direction": "out"
+        },
+        "unverified": true
+      },
+      "Get_Scale_Rlevel_Offset": {
+        "command": "Get_Scale_Rlevel_Offset",
+        "verb": "get",
+        "description": "Trace Y-Axis Reference Level",
+        "scpi": ":DISPlay:WINDow:TRACe:Y:SCALe:RLEVel:OFFSet?",
+        "scpi_fast": ":DISP:WIND:TRAC:Y:SCAL:RLEV:OFFS?",
+        "subsystem": "SCAL",
+        "group": "SCAL",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": {
+          "count": 1,
+          "type": "NR3",
+          "unit": "V"
+        },
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Get_Scale_Rlevel_Offset",
+          "direction": "in",
+          "payload_format": {
+            "command": "Get_Scale_Rlevel_Offset"
+          },
+          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/Get_Scale_Rlevel_Offset",
+          "reading_direction": "out"
+        },
+        "unverified": true
+      },
+      "Get_Scale_Spacing": {
+        "command": "Get_Scale_Spacing",
+        "verb": "get",
+        "description": "Vertical Axis Scaling",
+        "scpi": ":DISPlay:WINDow:TRACe:Y:SCALe:SPACing?",
+        "scpi_fast": ":DISP:WIND:TRAC:Y:SCAL:SPAC?",
+        "subsystem": "SCAL",
+        "group": "SCAL",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": {
+          "count": 1
+        },
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Get_Scale_Spacing",
+          "direction": "in",
+          "payload_format": {
+            "command": "Get_Scale_Spacing"
+          },
+          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/Get_Scale_Spacing",
+          "reading_direction": "out"
+        },
+        "unverified": true
+      },
       "Get_Fcount_State": {
         "command": "Get_Fcount_State",
         "verb": "get",
@@ -1869,86 +1949,6 @@
           "reading_direction": "out"
         },
         "unverified": false
-      },
-      "Get_Scale_Pdivision": {
-        "command": "Get_Scale_Pdivision",
-        "verb": "get",
-        "description": "Trace Y-Axis Scaling",
-        "scpi": ":SCALe:PDIVision?",
-        "scpi_fast": ":SCAL:PDIV?",
-        "subsystem": "SCAL",
-        "group": "SCAL",
-        "args": [],
-        "arg": {
-          "kind": "none"
-        },
-        "returns": {
-          "count": 1
-        },
-        "mqtt": {
-          "topic": "APK.audio/Gui/Komands/Spectrum/Get_Scale_Pdivision",
-          "direction": "in",
-          "payload_format": {
-            "command": "Get_Scale_Pdivision"
-          },
-          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/Get_Scale_Pdivision",
-          "reading_direction": "out"
-        },
-        "unverified": true
-      },
-      "Get_Scale_Rlevel_Offset": {
-        "command": "Get_Scale_Rlevel_Offset",
-        "verb": "get",
-        "description": "Trace Y-Axis Reference Level",
-        "scpi": ":SCALe:RLEVel:OFFSet?",
-        "scpi_fast": ":SCAL:RLEV:OFFS?",
-        "subsystem": "SCAL",
-        "group": "SCAL",
-        "args": [],
-        "arg": {
-          "kind": "none"
-        },
-        "returns": {
-          "count": 1,
-          "type": "NR3",
-          "unit": "V"
-        },
-        "mqtt": {
-          "topic": "APK.audio/Gui/Komands/Spectrum/Get_Scale_Rlevel_Offset",
-          "direction": "in",
-          "payload_format": {
-            "command": "Get_Scale_Rlevel_Offset"
-          },
-          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/Get_Scale_Rlevel_Offset",
-          "reading_direction": "out"
-        },
-        "unverified": true
-      },
-      "Get_Scale_Spacing": {
-        "command": "Get_Scale_Spacing",
-        "verb": "get",
-        "description": "Vertical Axis Scaling",
-        "scpi": ":SCALe:SPACing?",
-        "scpi_fast": ":SCAL:SPAC?",
-        "subsystem": "SCAL",
-        "group": "SCAL",
-        "args": [],
-        "arg": {
-          "kind": "none"
-        },
-        "returns": {
-          "count": 1
-        },
-        "mqtt": {
-          "topic": "APK.audio/Gui/Komands/Spectrum/Get_Scale_Spacing",
-          "direction": "in",
-          "payload_format": {
-            "command": "Get_Scale_Spacing"
-          },
-          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/Get_Scale_Spacing",
-          "reading_direction": "out"
-        },
-        "unverified": true
       },
       "Get_Averaging": {
         "command": "Get_Averaging",
@@ -3247,6 +3247,85 @@
         },
         "unverified": false
       },
+      "Set_Scale_Pdivision": {
+        "command": "Set_Scale_Pdivision",
+        "verb": "set",
+        "description": "Trace Y-Axis Scaling",
+        "scpi": ":DISPlay:WINDow:TRACe:Y:SCALe:PDIVision <value>",
+        "scpi_fast": ":DISP:WIND:TRAC:Y:SCAL:PDIV <value>",
+        "subsystem": "SCAL",
+        "group": "SCAL",
+        "args": [
+          "value"
+        ],
+        "arg": {
+          "kind": "unknown"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Scale_Pdivision",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Scale_Pdivision",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Scale_Rlevel_Offset": {
+        "command": "Set_Scale_Rlevel_Offset",
+        "verb": "set",
+        "description": "Trace Y-Axis Reference Level",
+        "scpi": ":DISPlay:WINDow:TRACe:Y:SCALe:RLEVel:OFFSet <value>",
+        "scpi_fast": ":DISP:WIND:TRAC:Y:SCAL:RLEV:OFFS <value>",
+        "subsystem": "SCAL",
+        "group": "SCAL",
+        "args": [
+          "value"
+        ],
+        "arg": {
+          "kind": "numeric",
+          "unit": "V"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Scale_Rlevel_Offset",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Scale_Rlevel_Offset",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Scale_Spacing": {
+        "command": "Set_Scale_Spacing",
+        "verb": "set",
+        "description": "Vertical Axis Scaling",
+        "scpi": ":DISPlay:WINDow:TRACe:Y:SCALe:SPACing <value>",
+        "scpi_fast": ":DISP:WIND:TRAC:Y:SCAL:SPAC <value>",
+        "subsystem": "SCAL",
+        "group": "SCAL",
+        "args": [
+          "value"
+        ],
+        "arg": {
+          "kind": "unknown"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Scale_Spacing",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Scale_Spacing",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Fcount_State": {
         "command": "Set_Fcount_State",
         "verb": "set",
@@ -4092,85 +4171,6 @@
           }
         },
         "unverified": false
-      },
-      "Set_Scale_Pdivision": {
-        "command": "Set_Scale_Pdivision",
-        "verb": "set",
-        "description": "Trace Y-Axis Scaling",
-        "scpi": ":SCALe:PDIVision <value>",
-        "scpi_fast": ":SCAL:PDIV <value>",
-        "subsystem": "SCAL",
-        "group": "SCAL",
-        "args": [
-          "value"
-        ],
-        "arg": {
-          "kind": "unknown"
-        },
-        "returns": null,
-        "mqtt": {
-          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Scale_Pdivision",
-          "direction": "in",
-          "payload_format": {
-            "command": "Set_Scale_Pdivision",
-            "value": "<value>",
-            "input_name": "value"
-          }
-        },
-        "unverified": true
-      },
-      "Set_Scale_Rlevel_Offset": {
-        "command": "Set_Scale_Rlevel_Offset",
-        "verb": "set",
-        "description": "Trace Y-Axis Reference Level",
-        "scpi": ":SCALe:RLEVel:OFFSet <value>",
-        "scpi_fast": ":SCAL:RLEV:OFFS <value>",
-        "subsystem": "SCAL",
-        "group": "SCAL",
-        "args": [
-          "value"
-        ],
-        "arg": {
-          "kind": "numeric",
-          "unit": "V"
-        },
-        "returns": null,
-        "mqtt": {
-          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Scale_Rlevel_Offset",
-          "direction": "in",
-          "payload_format": {
-            "command": "Set_Scale_Rlevel_Offset",
-            "value": "<value>",
-            "input_name": "value"
-          }
-        },
-        "unverified": true
-      },
-      "Set_Scale_Spacing": {
-        "command": "Set_Scale_Spacing",
-        "verb": "set",
-        "description": "Vertical Axis Scaling",
-        "scpi": ":SCALe:SPACing <value>",
-        "scpi_fast": ":SCAL:SPAC <value>",
-        "subsystem": "SCAL",
-        "group": "SCAL",
-        "args": [
-          "value"
-        ],
-        "arg": {
-          "kind": "unknown"
-        },
-        "returns": null,
-        "mqtt": {
-          "topic": "APK.audio/Gui/Komands/Spectrum/Set_Scale_Spacing",
-          "direction": "in",
-          "payload_format": {
-            "command": "Set_Scale_Spacing",
-            "value": "<value>",
-            "input_name": "value"
-          }
-        },
-        "unverified": true
       },
       "Set_Sense_Frequency_Center": {
         "command": "Set_Sense_Frequency_Center",
@@ -6280,6 +6280,86 @@
         },
         "unverified": false
       },
+      "Get_Scale_Pdivision": {
+        "command": "Get_Scale_Pdivision",
+        "verb": "nab",
+        "description": "Trace Y-Axis Scaling",
+        "scpi": ":DISPlay:WINDow:TRACe:Y:SCALe:PDIVision?",
+        "scpi_fast": ":DISP:WIND:TRAC:Y:SCAL:PDIV?",
+        "subsystem": "SCAL",
+        "group": "SCAL",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": {
+          "count": 1
+        },
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Get_Scale_Pdivision",
+          "direction": "in",
+          "payload_format": {
+            "command": "Get_Scale_Pdivision"
+          },
+          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/Get_Scale_Pdivision",
+          "reading_direction": "out"
+        },
+        "unverified": true
+      },
+      "Get_Scale_Rlevel_Offset": {
+        "command": "Get_Scale_Rlevel_Offset",
+        "verb": "nab",
+        "description": "Trace Y-Axis Reference Level",
+        "scpi": ":DISPlay:WINDow:TRACe:Y:SCALe:RLEVel:OFFSet?",
+        "scpi_fast": ":DISP:WIND:TRAC:Y:SCAL:RLEV:OFFS?",
+        "subsystem": "SCAL",
+        "group": "SCAL",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": {
+          "count": 1,
+          "type": "NR3",
+          "unit": "V"
+        },
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Get_Scale_Rlevel_Offset",
+          "direction": "in",
+          "payload_format": {
+            "command": "Get_Scale_Rlevel_Offset"
+          },
+          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/Get_Scale_Rlevel_Offset",
+          "reading_direction": "out"
+        },
+        "unverified": true
+      },
+      "Get_Scale_Spacing": {
+        "command": "Get_Scale_Spacing",
+        "verb": "nab",
+        "description": "Vertical Axis Scaling",
+        "scpi": ":DISPlay:WINDow:TRACe:Y:SCALe:SPACing?",
+        "scpi_fast": ":DISP:WIND:TRAC:Y:SCAL:SPAC?",
+        "subsystem": "SCAL",
+        "group": "SCAL",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": {
+          "count": 1
+        },
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Spectrum/Get_Scale_Spacing",
+          "direction": "in",
+          "payload_format": {
+            "command": "Get_Scale_Spacing"
+          },
+          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/Get_Scale_Spacing",
+          "reading_direction": "out"
+        },
+        "unverified": true
+      },
       "Get_Fcount_State": {
         "command": "Get_Fcount_State",
         "verb": "nab",
@@ -7259,86 +7339,6 @@
           "reading_direction": "out"
         },
         "unverified": false
-      },
-      "Get_Scale_Pdivision": {
-        "command": "Get_Scale_Pdivision",
-        "verb": "nab",
-        "description": "Trace Y-Axis Scaling",
-        "scpi": ":SCALe:PDIVision?",
-        "scpi_fast": ":SCAL:PDIV?",
-        "subsystem": "SCAL",
-        "group": "SCAL",
-        "args": [],
-        "arg": {
-          "kind": "none"
-        },
-        "returns": {
-          "count": 1
-        },
-        "mqtt": {
-          "topic": "APK.audio/Gui/Komands/Spectrum/Get_Scale_Pdivision",
-          "direction": "in",
-          "payload_format": {
-            "command": "Get_Scale_Pdivision"
-          },
-          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/Get_Scale_Pdivision",
-          "reading_direction": "out"
-        },
-        "unverified": true
-      },
-      "Get_Scale_Rlevel_Offset": {
-        "command": "Get_Scale_Rlevel_Offset",
-        "verb": "nab",
-        "description": "Trace Y-Axis Reference Level",
-        "scpi": ":SCALe:RLEVel:OFFSet?",
-        "scpi_fast": ":SCAL:RLEV:OFFS?",
-        "subsystem": "SCAL",
-        "group": "SCAL",
-        "args": [],
-        "arg": {
-          "kind": "none"
-        },
-        "returns": {
-          "count": 1,
-          "type": "NR3",
-          "unit": "V"
-        },
-        "mqtt": {
-          "topic": "APK.audio/Gui/Komands/Spectrum/Get_Scale_Rlevel_Offset",
-          "direction": "in",
-          "payload_format": {
-            "command": "Get_Scale_Rlevel_Offset"
-          },
-          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/Get_Scale_Rlevel_Offset",
-          "reading_direction": "out"
-        },
-        "unverified": true
-      },
-      "Get_Scale_Spacing": {
-        "command": "Get_Scale_Spacing",
-        "verb": "nab",
-        "description": "Vertical Axis Scaling",
-        "scpi": ":SCALe:SPACing?",
-        "scpi_fast": ":SCAL:SPAC?",
-        "subsystem": "SCAL",
-        "group": "SCAL",
-        "args": [],
-        "arg": {
-          "kind": "none"
-        },
-        "returns": {
-          "count": 1
-        },
-        "mqtt": {
-          "topic": "APK.audio/Gui/Komands/Spectrum/Get_Scale_Spacing",
-          "direction": "in",
-          "payload_format": {
-            "command": "Get_Scale_Spacing"
-          },
-          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/Get_Scale_Spacing",
-          "reading_direction": "out"
-        },
-        "unverified": true
       },
       "Get_Averaging": {
         "command": "Get_Averaging",

@@ -1,0 +1,20 @@
+{
+  "model": "N9342CN",
+  "manual": "Agilent N9342C Programmer's Guide; [SENSe:] is the default node",
+  "roots": [
+    "CALCulate",
+    "DISPlay",
+    "INITiate",
+    "SENSe",
+    "SYSTem",
+    "FREQuency",
+    "POWer",
+    "BANDwidth",
+    "BWIDth",
+    "SWEep"
+  ],
+  "optional": [
+    "SENSe"
+  ],
+  "unresolved": {}
+}

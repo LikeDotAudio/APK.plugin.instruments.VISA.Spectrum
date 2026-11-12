@@ -135,6 +135,14 @@ Several statements in one message, so they hang off no single branch. Every stat
       - **`Y`**
         - `RLEVel` — **SET** `Set_Reference_Level` · `<dbm_value>` · args: `dbm_value` · numeric (V)
         - `RLEVel?` — **NAB** `Reference_Level` · → NR3 V
+        - **`SCALe`**
+          - `PDIVision` — **SET** `Set_Scale_Pdivision` · `<value>` · args: `value` · †<br>Trace Y-Axis Scaling
+          - `SPACing` — **SET** `Set_Scale_Spacing` · `<value>` · args: `value` · †<br>Vertical Axis Scaling
+          - `PDIVision?` — **NAB** `Get_Scale_Pdivision` · → 1 value · †<br>Trace Y-Axis Scaling
+          - `SPACing?` — **NAB** `Get_Scale_Spacing` · → 1 value · †<br>Vertical Axis Scaling
+          - **`RLEVel`**
+            - `OFFSet` — **SET** `Set_Scale_Rlevel_Offset` · `<value>` · args: `value` · numeric (V) · †<br>Trace Y-Axis Reference Level
+            - `OFFSet?` — **NAB** `Get_Scale_Rlevel_Offset` · → NR3 V · †<br>Trace Y-Axis Reference Level
 - **`FCOunt`**
   - `STATe` — **SET** `Set_Fcount_State` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Frequency Counter Marker
   - `STATe?` — **NAB** `Get_Fcount_State` · → BOOL · †<br>Frequency Counter Marker
@@ -247,14 +255,6 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `AUTO` — **DO** `Set_Input_Auto_Attenuation_ON` · `ON`
   - **`RF`**
     - `ATTenuation?` — **NAB** `Attenuation` · → NR3 dB
-- **`SCALe`**
-  - `PDIVision` — **SET** `Set_Scale_Pdivision` · `<value>` · args: `value` · †<br>Trace Y-Axis Scaling
-  - `SPACing` — **SET** `Set_Scale_Spacing` · `<value>` · args: `value` · †<br>Vertical Axis Scaling
-  - `PDIVision?` — **NAB** `Get_Scale_Pdivision` · → 1 value · †<br>Trace Y-Axis Scaling
-  - `SPACing?` — **NAB** `Get_Scale_Spacing` · → 1 value · †<br>Vertical Axis Scaling
-  - **`RLEVel`**
-    - `OFFSet` — **SET** `Set_Scale_Rlevel_Offset` · `<value>` · args: `value` · numeric (V) · †<br>Trace Y-Axis Reference Level
-    - `OFFSet?` — **NAB** `Get_Scale_Rlevel_Offset` · → NR3 V · †<br>Trace Y-Axis Reference Level
 - **`SENS`**
   - **`FREQ`**
     - `CENT` — **SET** `Set_Sense_Frequency_Center` · `<value>` · args: `value` · enum: `UP` | `DOWN` · †<br>Using C with Marker Peak Search and Peak Excursion
@@ -324,7 +324,7 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `CHANnel?` — **NAB** `Get_System_Channel` · → CRD · †<br>Low Frequency Channel
   - `DATE?` — **NAB** `Get_System_Date` · → 1 value · †<br>Set Date
   - `TIME?` — **NAB** `Get_System_Time` · → NR3 s · †<br>Set Time
-  - `ERRor?` — **NAB** `error_information` · → NR2<br>System Error Check
+  - `ERRor?` — **NAB** `error_information` · → ERROR<br>System Error Check
   - `PRESet` — **DO** `Do_System_Preset` · †
   - **`CONFigure`**
     - `PORT` — **SET** `Set_System_Configure_Port` · `<value>` · args: `value` · enum: `REF` | `TRIG` · †<br>Power on Type

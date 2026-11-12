@@ -20,24 +20,24 @@ From the BIM part [`rohde-and-schwarz/fsh4`](/api/bim/parts?full=1&id=rohde-and-
 
 | Terminal | Connector | Domain | Count | Signal |
 |---|---|---|---:|---|
-| RF INPUT | N-type female | rf | 1 | RF input on the top, 50 Ω, max +20 dBm continuous |
-| EXT TRIG / EXT REF | BNC female | clock | 1 | external trigger (TTL) or 10 MHz reference in (≥ 0 dBm), 50 Ω; DC bias port 2 on model .24 |
+| RF INPUT | COAX-N-F | rf | 1 | RF input on the top, 50 Ω, max +20 dBm continuous |
+| EXT TRIG / EXT REF | COAX-BNC-F | clock | 1 | external trigger (TTL) or 10 MHz reference in (≥ 0 dBm), 50 Ω; DC bias port 2 on model .24 |
 
 ### Outputs
 
 | Terminal | Connector | Domain | Count | Signal |
 |---|---|---|---:|---|
-| HEADPHONE | 3.5 mm mini jack | audio | 1 | AF output, AM/FM demod, 32 Ω nom. |
-| IF OUT | BNC female | signal | 1 | IF out 54.4 MHz (21.4 MHz before S/N 105000), 50 Ω; DC bias port 1 on model .24 |
+| HEADPHONE | TRS-3.5 | audio | 1 | AF output, AM/FM demod, 32 Ω nom. |
+| IF OUT | COAX-BNC-F | signal | 1 | IF out 54.4 MHz (21.4 MHz before S/N 105000), 50 Ω; DC bias port 1 on model .24 |
 
 ### Connections (control and network)
 
 | Terminal | Connector | Domain | Count | Signal |
 |---|---|---|---:|---|
-| Tracking generator output | N-type female | rf | 1 | tracking generator, 50 Ω, 0 dBm nom., 100 kHz–3.6 GHz (models .14/.24 only) |
-| POWER SENSOR | 7-contact female (Binder 712) | control | 1 | power sensor supply and data |
+| Tracking generator output | COAX-N-F | rf | 1 | tracking generator, 50 Ω, 0 dBm nom., 100 kHz–3.6 GHz (models .14/.24 only) |
+| POWER SENSOR | BINDER-712-7-F | control | 1 | power sensor supply and data |
 | LAN | RJ45 | network | 1 | 10/100BASE-T |
-| MINI USB | USB mini-B | control | 1 | USB 1.1 PC connection |
+| MINI USB | USB-MINI-B | control | 1 | USB 1.1 PC connection |
 | USB HOST | USB-A | usb | 1 | USB host for memory stick (S/N ≥ 105000) |
 
 **Power:** DC port
@@ -87,6 +87,9 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Get_Demod_Fm_State` | `:DEMod:FM:STATe?` | — | BOOL → `…/Reading/Get_Demod_Fm_State` | DEM | unverified |
 | `Get_Display_Mode_Brightness` | `:DISPlay:MODE:BRIGhtness?` | — | → `…/Reading/Get_Display_Mode_Brightness` | DISP | unverified |
 | `Reference_Level` | `:DISPlay:WINDow:TRACe:Y:RLEVel?` | — | NR3 → `…/Reading/Reference_Level` | Individual Read Queries |  |
+| `Get_Scale_Pdivision` | `:DISPlay:WINDow:TRACe:Y:SCALe:PDIVision?` | — | → `…/Reading/Get_Scale_Pdivision` | SCAL | unverified |
+| `Get_Scale_Rlevel_Offset` | `:DISPlay:WINDow:TRACe:Y:SCALe:RLEVel:OFFSet?` | — | NR3 → `…/Reading/Get_Scale_Rlevel_Offset` | SCAL | unverified |
+| `Get_Scale_Spacing` | `:DISPlay:WINDow:TRACe:Y:SCALe:SPACing?` | — | → `…/Reading/Get_Scale_Spacing` | SCAL | unverified |
 | `Get_Fcount_State` | `FCOunt:STATe?` | — | BOOL → `…/Reading/Get_Fcount_State` | FCO | unverified |
 | `Get_Instrument_Measure` | `:INSTrument:MEASure?` | — | → `…/Reading/Get_Instrument_Measure` | INST | unverified |
 | `Get_Instrument_Select` | `:INSTrument:SELect?` | — | CRD → `…/Reading/Get_Instrument_Select` | INST | unverified |
@@ -122,9 +125,6 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Get_Measure_Semask_Offset_List_Test` | `:MEASure:SEMask:OFFSetn:LIST:TEST?` | — | → `…/Reading/Get_Measure_Semask_Offset_List_Test` | MEAS | unverified |
 | `Get_Measure_Semask_Sweep` | `:MEASure:SEMask:SWEeptime?` | — | CRD → `…/Reading/Get_Measure_Semask_Sweep` | MEAS | unverified |
 | `Attenuation` | `:POWer:RF:ATTenuation?` | — | NR3 → `…/Reading/Attenuation` | Individual Read Queries |  |
-| `Get_Scale_Pdivision` | `:SCALe:PDIVision?` | — | → `…/Reading/Get_Scale_Pdivision` | SCAL | unverified |
-| `Get_Scale_Rlevel_Offset` | `:SCALe:RLEVel:OFFSet?` | — | NR3 → `…/Reading/Get_Scale_Rlevel_Offset` | SCAL | unverified |
-| `Get_Scale_Spacing` | `:SCALe:SPACing?` | — | → `…/Reading/Get_Scale_Spacing` | SCAL | unverified |
 | `Get_Averaging` | `:SENSe:AVERage:TRACe<trace_number>:COUNt?` | — | NR1 → `…/Reading/Get_Averaging` | Trace |  |
 | `Get_Averaging_State` | `:SENSe:AVERage:TRACe<trace_number>:STATe?` | — | BOOL → `…/Reading/Get_Averaging_State` | Trace |  |
 | `Get_Sense_Detector_Function` | `:SENSe:DETector:FUNCtion?` | — | CRD → `…/Reading/Get_Sense_Detector_Function` | SENS | unverified |
@@ -175,6 +175,9 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Set_Demod_Fm_State` | `:DEMod:FM:STATe <value>` | `value`: `OFF` · `ON` | — | DEM | unverified |
 | `Set_Display_Mode_Brightness` | `:DISPlay:MODE:BRIGhtness <value>` | `value`: unknown | — | DISP | unverified |
 | `Set_Reference_Level` | `:DISPlay:WINDow:TRACe:Y:RLEVel <dbm_value>` | `dbm_value`: numeric V | — | Individual Power Sets |  |
+| `Set_Scale_Pdivision` | `:DISPlay:WINDow:TRACe:Y:SCALe:PDIVision <value>` | `value`: unknown | — | SCAL | unverified |
+| `Set_Scale_Rlevel_Offset` | `:DISPlay:WINDow:TRACe:Y:SCALe:RLEVel:OFFSet <value>` | `value`: numeric V | — | SCAL | unverified |
+| `Set_Scale_Spacing` | `:DISPlay:WINDow:TRACe:Y:SCALe:SPACing <value>` | `value`: unknown | — | SCAL | unverified |
 | `Set_Fcount_State` | `FCOunt:STATe <value>` | `value`: `OFF` · `ON` | — | FCO | unverified |
 | `Set_Center_Freq_MHz` | `:FREQuency:CENTer <hz_value>` | `hz_value`: numeric | — | RIG Frequency commands |  |
 | `Set_Span_Frequency` | `:FREQuency:SPAN <hz_value>` | `hz_value`: numeric | — | RIG Frequency commands |  |
@@ -206,9 +209,6 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Set_Measure_Semask_Offset_List_Test` | `:MEASure:SEMask:OFFSet:LIST:TEST <value>` | `value`: unknown | — | MEAS | unverified |
 | `Set_Measure_Semask_Sweep` | `:MEASure:SEMask:SWEeptime <value>` | `value`: numeric 0.00837…4000 s | — | MEAS | unverified |
 | `Set_Power_Attenuation` | `:POWer:ATTenuation <db_value>` | `db_value`: numeric dB | — | Individual Power Sets |  |
-| `Set_Scale_Pdivision` | `:SCALe:PDIVision <value>` | `value`: unknown | — | SCAL | unverified |
-| `Set_Scale_Rlevel_Offset` | `:SCALe:RLEVel:OFFSet <value>` | `value`: numeric V | — | SCAL | unverified |
-| `Set_Scale_Spacing` | `:SCALe:SPACing <value>` | `value`: unknown | — | SCAL | unverified |
 | `Set_Sense_Frequency_Center` | `SENS:FREQ:CENT <value>` | `value`: `UP` · `DOWN` | — | SENS | unverified |
 | `Set_Sense_Frequency_Span` | `SENS:FREQ:SPAN <value>` | `value`: numeric Hz | — | SENS | unverified |
 | `Set_Sense_Frequency_Start` | `SENS:FREQ:STAR <value>` | `value`: numeric Hz | — | SENS | unverified |
@@ -270,6 +270,9 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Get_Display_Mode_Brightness` | `:DISPlay:MODE:BRIGhtness?` | — | → `…/Reading/Get_Display_Mode_Brightness` | DISP | unverified |
 | `Reference_Level` | `:DISPlay:WINDow:TRACe:Y:RLEVel?` | — | NR3 → `…/Reading/Reference_Level` | Individual Read Queries |  |
 | `amplitude_settings` | `:DISPlay:WINDow:TRACe:Y:RLEVel?;:POWer:ATTenuation?;:POWer:GAIN?` | — | ×3 → `…/Reading/amplitude_settings` | NAB Amplitude Monitoring |  |
+| `Get_Scale_Pdivision` | `:DISPlay:WINDow:TRACe:Y:SCALe:PDIVision?` | — | → `…/Reading/Get_Scale_Pdivision` | SCAL | unverified |
+| `Get_Scale_Rlevel_Offset` | `:DISPlay:WINDow:TRACe:Y:SCALe:RLEVel:OFFSet?` | — | NR3 → `…/Reading/Get_Scale_Rlevel_Offset` | SCAL | unverified |
+| `Get_Scale_Spacing` | `:DISPlay:WINDow:TRACe:Y:SCALe:SPACing?` | — | → `…/Reading/Get_Scale_Spacing` | SCAL | unverified |
 | `Get_Fcount_State` | `FCOunt:STATe?` | — | BOOL → `…/Reading/Get_Fcount_State` | FCO | unverified |
 | `Frequency_settings` | `:FREQuency:STARt?;:FREQuency:STOP?;:FREQuency:CENTer?;:FREQuency:SPAN?` | — | ×4 → `…/Reading/Frequency_settings` | NAB Frequency Monitoring |  |
 | `Get_Instrument_Measure` | `:INSTrument:MEASure?` | — | → `…/Reading/Get_Instrument_Measure` | INST | unverified |
@@ -306,9 +309,6 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Get_Measure_Semask_Offset_List_Test` | `:MEASure:SEMask:OFFSetn:LIST:TEST?` | — | → `…/Reading/Get_Measure_Semask_Offset_List_Test` | MEAS | unverified |
 | `Get_Measure_Semask_Sweep` | `:MEASure:SEMask:SWEeptime?` | — | CRD → `…/Reading/Get_Measure_Semask_Sweep` | MEAS | unverified |
 | `Attenuation` | `:POWer:RF:ATTenuation?` | — | NR3 → `…/Reading/Attenuation` | Individual Read Queries |  |
-| `Get_Scale_Pdivision` | `:SCALe:PDIVision?` | — | → `…/Reading/Get_Scale_Pdivision` | SCAL | unverified |
-| `Get_Scale_Rlevel_Offset` | `:SCALe:RLEVel:OFFSet?` | — | NR3 → `…/Reading/Get_Scale_Rlevel_Offset` | SCAL | unverified |
-| `Get_Scale_Spacing` | `:SCALe:SPACing?` | — | → `…/Reading/Get_Scale_Spacing` | SCAL | unverified |
 | `Get_Averaging` | `:SENSe:AVERage:TRACe<trace_number>:COUNt?` | — | NR1 → `…/Reading/Get_Averaging` | Trace |  |
 | `Get_Averaging_State` | `:SENSe:AVERage:TRACe<trace_number>:STATe?` | — | BOOL → `…/Reading/Get_Averaging_State` | Trace |  |
 | `bandwidth_settings` | `:SENSe:BANDwidth:RESolution?;:SENSe:BANDwidth:VIDeo?;:SENSe:BANDwidth:VIDeo:AUTO?;:INITiate:CONTinuous?;:SENSe:SWEep:TIME?` | — | ×5 → `…/Reading/bandwidth_settings` | NAB Bandwidth Monitoring |  |
