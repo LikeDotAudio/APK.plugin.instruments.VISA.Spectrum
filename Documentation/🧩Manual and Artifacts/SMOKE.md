@@ -4,12 +4,12 @@ Is `INSTRUMENT.Spectrum` deployed? Written by `.apk.scripts/smoke.py` from the m
 
 ← [Wiki home](../README.md)
 
-**❌ FAIL** — 0/1 checks, since 2026-11-04 20:50 EST
+**✅ PASS** — 1/1 checks, since 2026-11-12 00:15 EST
 
 | Check | Target | Result | Detail |
 |---|---|---|---|
-| pushed | origin | ❌ | no upstream branch |
+| pushed | [APK.plugin.instruments.VISA.Spectrum](https://github.com/LikeDotAudio/APK.plugin.instruments.VISA.Spectrum.git) | ✅ | HEAD is on origin |
 
 Re-run: `python3 .apk.scripts/smoke.py PODS/POD.THICK/INSTRUMENTS/INSTRUMENT.Spectrum`
 
-<!-- smoke:sig 572ff359c924 since 2026-11-04 20:50 EST -->
+<!-- smoke:sig 20589b29e872 since 2026-11-12 00:15 EST -->
